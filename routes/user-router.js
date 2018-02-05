@@ -4,12 +4,17 @@ const jsonParser = require('body-parser').json();
 
 const userRouter = module.exports = new Router();
 
-userRouter.post(`/signup`, jsonParser, (request, response, next) => {
-  if(request.length < 1){
-    throw new Error('no request content');
-  }else if(typeof request.body !== 'string'){
-    throw new Error('not a string');
+userRouter.post(`/signup`, jsonParser, (request, response) => {
+  if(!request.body){
+    throw new Error(`invalid request`);
   }
+  return response.json(`the POST request worked`);
 });
 
-// userRouter.get();
+userRouter.get(`/login`, (request, response) => {
+  console.log(`get ran`);
+  if(!request.body){
+    throw new Error(`invalid request`);
+  }
+  return response.json('the GET request worked');
+});
