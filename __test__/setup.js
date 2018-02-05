@@ -1,2 +1,3 @@
 'use strict';
-const process.env.port = 3000;
+process.env.PORT = 3000;
+process.env.MONGODB_URI = 'mongodb://localhost/testing';
