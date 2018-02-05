@@ -1,4 +1,8 @@
 'use strict';
 const superagent = require('superagent');
 
-describe();
+describe(`testing user routes`, () => {
+  test(`user post request`, () => {
+    expect();
+  });
+});
