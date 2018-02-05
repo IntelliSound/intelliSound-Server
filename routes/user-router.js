@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const jsonParser = require('body-parser').json();
-// const User = require('../models/user');
+const User = require('../models/user');
 
 const userRouter = module.exports = new Router();
 
