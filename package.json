@@ -1,0 +1,22 @@
+{
+  "name": "intellisound-server",
+  "version": "1.0.0",
+  "description": "server for intellisound",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IntelliSound/intelliSound-Server.git"
+  },
+  "author": "andrew bloom, david lindahl, jacob evans, nicholas carignan, shannon dillon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IntelliSound/intelliSound-Server/issues"
+  },
+  "homepage": "https://github.com/IntelliSound/intelliSound-Server#readme"
+}
