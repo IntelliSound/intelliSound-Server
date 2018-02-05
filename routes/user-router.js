@@ -1,12 +1,14 @@
 const {Router} = require('express');
 const jsonParser = require('body-parser').json();
+const httpErrors = require('http-errors');
 const User = require('../models/user');
+const basicAuthMiddleware = require('../lib/middleware/basic-auth-middleware');
 
 const userRouter = module.exports = new Router();
 
 userRouter.post(`/signup`, jsonParser, (request, response, next) => {
   if(!request.body.username || !request.body.email || !request.body.password){
-    throw new Error(`invalid request`);
+    return next(new httpErrors(400, `__ERROR__ username, email, and password are required`));
   }
 
   return User.create(request.body.username, request.body.email, request.body.password)
@@ -15,6 +17,11 @@ userRouter.post(`/signup`, jsonParser, (request, response, next) => {
     .catch(next);
 });
 
-userRouter.get(`/login`, (request, response, next) => {
-  return response.json('the GET request worked');
+userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
+  if(!request.user){
+    return next(new httpErrors(404, `__ERROR__ Not Found`));
+  }
+  return request.user.createToken()
+    .then(token => response.json({token}))
+    .catch(next);
 });
