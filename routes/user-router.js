@@ -4,13 +4,17 @@ const User = require('../models/user');
 
 const userRouter = module.exports = new Router();
 
-userRouter.post(`/signup`, jsonParser, (request, response) => {
+userRouter.post(`/signup`, jsonParser, (request, response, next) => {
   if(!request.body.username || !request.body.email || !request.body.password){
     throw new Error(`invalid request`);
   }
-  return response.json(`the POST request worked`);
+
+  return User.create(request.body.username, request.body.email, request.body.password)
+    .then(user => user.createToken())
+    .then(token => response.json({token}))
+    .catch(next);
 });
 
-userRouter.get(`/login`, (request, response) => {
+userRouter.get(`/login`, (request, response, next) => {
   return response.json('the GET request worked');
 });

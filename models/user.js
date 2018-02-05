@@ -26,7 +26,7 @@ const userSchema = mongoose.Schema({
   },
   OAuth: {
     type: Boolean,
-    required: true,
+    // required: true,
   },
   networks: [
     {type: mongoose.Schema.Types.ObjectId,
