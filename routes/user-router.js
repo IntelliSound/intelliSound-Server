@@ -12,9 +12,5 @@ userRouter.post(`/signup`, jsonParser, (request, response) => {
 });
 
 userRouter.get(`/login`, (request, response) => {
-  console.log(`get ran`);
-  if(!request.body){
-    throw new Error(`invalid request`);
-  }
   return response.json('the GET request worked');
 });

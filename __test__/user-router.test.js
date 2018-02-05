@@ -15,10 +15,14 @@ describe(`testing user POST routes`, () => {
 });
 
 describe(`testing user GET routes`, () => {
+
   test(`user GET request to /login should return a test message on success`, () => {
     return superagent.get(`${API_URL}/login`)
       .then(response => {
         expect(response.body).toEqual('the GET request worked');
+      })
+      .catch(error => {
+        console.log(error);
       });
   });
 });
