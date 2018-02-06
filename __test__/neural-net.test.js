@@ -1,4 +1,5 @@
-const waveParser = require('./sound-data-parser');
+const waveParser = require('../lib/sound-data-parser');
+const waveWriter = require('../lib/wave-writer');
 const neuralNetwork = require('../lib/neural-net');
 const fsx = require('fs-extra');
 
@@ -10,9 +11,10 @@ describe('Neural Network Test', () => {
     return fsx.readFile(inputFilePath)
       .then(data => {
         const parsedFile = waveParser(data);
-        const neuralData = parsedFile.neuralArray;
-        parsedFile.neuralTransformedArray = neuralNetwork(neuralData)
-          .expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
+        parsedFile.neuralTransformedArray = neuralNetwork(parsedFile);
+        console.log(parsedFile.neuralTransformedArray);
+        fsx.writeFile('temp/transformed.wav', waveWriter(parsedFile));
+        expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
       });
   });
 });
