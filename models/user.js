@@ -3,6 +3,7 @@ const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 const jsonWebToken = require('jsonwebtoken');
 const httpErrors = require('http-errors');
+const neuralNetwork = require('./neuralNetwork');
 
 const userSchema = mongoose.Schema({
   username: {
@@ -28,9 +29,9 @@ const userSchema = mongoose.Schema({
     type: Boolean,
     // required: true,
   },
-  networks: [
+  neuralNetworks: [
     {type: mongoose.Schema.Types.ObjectId,
-      ref: 'network'}],
+      ref: 'neuralNetwork'}],
 });
 
 userSchema.methods.verifyPassword = function(password){
@@ -65,6 +66,7 @@ User.create = (username, email, password) => {
         email,
         passwordHash,
         tokenSeed,
+        neuralNetworks: [],
       }).save();
     });
 };

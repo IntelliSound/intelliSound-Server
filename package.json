@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest -i --coverage",
+    "lint": "eslint ./",
     "start": "node index.js",
     "dbon": "mkdir -p ./db && mongod --dbpath ./db",
     "dboff": "killall mongod"
@@ -26,7 +27,8 @@
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest": "^22.1.4",
-    "superagent": "^3.8.2"
+    "superagent": "^3.8.2",
+    "synaptic": "^1.1.4"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
