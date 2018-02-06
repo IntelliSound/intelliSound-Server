@@ -1,4 +1,5 @@
 const {Layer, Network} = require('synaptic');
+module.exports = {};
 
 let inputLayer = new Layer(2);
 let hiddenLayer = new Layer(3);
@@ -33,5 +34,4 @@ neuralNetwork.activate([1,1]);
 neuralNetwork.activate([1,0]);
 neuralNetwork.activate([0,1]);
 
-const exportedNetwork = neuralNetwork.toJSON();
-module.exports = exportedNetwork;
+module.exports = neuralNetwork.toJSON();

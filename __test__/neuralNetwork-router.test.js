@@ -4,7 +4,8 @@ const superagent = require('superagent');
 const server = require('../lib/server');
 const userMockFactory = require('./lib/mock-factories/user-mock-factory');
 const neuralNetworkMockFactory = require('./lib/mock-factories/neuralNetwork-mock-factory');
-const placeholderNetwork = Network.fromJSON();
+const testNetwork = require('./lib/testNetwork');
+const placeholderNetwork = JSON.stringify(testNetwork);
 
 const API_URL = `http://localhost:${process.env.PORT}`;
 
@@ -22,14 +23,13 @@ describe(`Neural Network Router`, () => {
           tempUserMock.token = response.token;
           return superagent.post(`${API_URL}/network`)
             .set('Authorization', `Bearer ${tempUserMock.token}`)
-            .send({
-              neuralNetwork: placeholderNetwork,
-            })
-            .then(response => {
-              expect(response.status).toEqual(200);
-              expect(response.body._id).toBeTruthy();
-            });
-        });
+            .send({neuralNetwork: placeholderNetwork});
+        })
+        .then(response => {
+          expect(response.status).toEqual(200);
+          expect(response.body._id).toBeTruthy();
+        })
+        .catch(console.log('broke'));
     });
   });
 });

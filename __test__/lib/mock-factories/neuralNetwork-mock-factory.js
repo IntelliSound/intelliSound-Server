@@ -4,7 +4,6 @@ require('synaptic');
 const neuralNetwork = require('../../../models/neuralNetwork');
 const placeholderNetwork = require('../testNetwork');
 const userMockFactory = require('./user-mock-factory');
-// console.log(placeholderNetwork, `placeholder network`);
 const neuralNetworkMockFactory = module.exports = {};
 
 neuralNetworkMockFactory.create = () => {

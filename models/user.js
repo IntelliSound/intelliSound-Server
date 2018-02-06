@@ -29,9 +29,9 @@ const userSchema = mongoose.Schema({
     type: Boolean,
     // required: true,
   },
-  networks: [
+  neuralNetworks: [
     {type: mongoose.Schema.Types.ObjectId,
-      ref: 'network'}],
+      ref: 'neuralNetwork'}],
 });
 
 userSchema.methods.verifyPassword = function(password){
@@ -66,7 +66,7 @@ User.create = (username, email, password) => {
         email,
         passwordHash,
         tokenSeed,
-        networks: new neuralNetwork({}),
+        neuralNetworks: new neuralNetwork({}),
       }).save();
     });
 };

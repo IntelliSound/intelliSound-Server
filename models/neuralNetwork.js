@@ -7,4 +7,4 @@ const neuralNetworkSchema = mongoose.Schema({
   },
 });
 
-const NeuralNetwork = module.exports = mongoose.model('neuralNetwork', neuralNetworkSchema);
+module.exports = mongoose.model('neuralNetwork', neuralNetworkSchema);
