@@ -1,10 +1,9 @@
 'use strict';
-require('./setup');
-const faker = require('faker');
+require('./lib/setup');
 const superagent = require('superagent');
-const server = require('../../lib/server');
-const userMockFactory = require('./mock-factories/user-mock-factory');
-const neuralNetworkMockFactory = require('./mock-factories/neuralNetwork-mock-factory');
+const server = require('../lib/server');
+const userMockFactory = require('./lib/mock-factories/user-mock-factory');
+const neuralNetworkMockFactory = require('./lib/mock-factories/neuralNetwork-mock-factory');
 
 const API_URL = `http://localhost:${process.env.PORT}`;
 
