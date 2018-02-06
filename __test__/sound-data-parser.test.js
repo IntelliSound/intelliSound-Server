@@ -3,7 +3,7 @@
 const fsx = require('fs-extra');
 const soundDataParser = require('../lib/sound-data-parser');
 
-describe('wave-parser', () => {
+describe('sound-data-parser', () => {
   test('should return constructedWaveFile which contains buffer and other data attached', () => {
     const inputFilePath = `${__dirname}/../assets/one_hundred_ms_sin.wav`;
 
