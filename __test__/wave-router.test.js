@@ -15,7 +15,9 @@ describe(`Wave Router tests`, () => {
 
   describe(`Wave Router POST request`, () => {
     test(`wave file POST request should return 200, a networkID, and a new wave file if there are no errors`, () => {
-      return superagent.post(`${API_URL}/wave`);
+      return superagent.post(`${API_URL}/wave`)
+        .attach('wave', `${__dirname}/assets/Broken_Robot5.wav`)
+        .then(console.log(`I ran`));
     });
   });
 });

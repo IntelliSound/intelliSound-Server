@@ -8,11 +8,13 @@ const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
 const NeuralNetworkModel = require('../models/neuralNetwork');
 // think we need to export the network as json from the neural-net file
 const ActualNeuralNetwork = require('../lib/neural-net');
+console.log(ActualNeuralNetwork, `the neural network Jake made`);
 
 const WaveRouter = module.exports = new Router();
 
 // user does NOT have to be logged in to upload a wave file and run it through the neural network
 WaveRouter.post('/wave', upload.any(), (request, response, next) => {
+  console.log(`groot`);
   if(request.files.length > 1){
     return next(new httpErrors(400, `__ERROR__ only one file can be uploaded at a time`));
   }

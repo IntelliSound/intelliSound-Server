@@ -16,3 +16,8 @@
 {"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:51:10.033Z"}
 {"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:51:10.093Z"}
 {"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:51:10.097Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:09:16.772Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:10:04.055Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:10:30.341Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:34:50.747Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:43:32.986Z"}

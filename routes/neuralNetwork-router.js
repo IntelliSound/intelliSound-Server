@@ -9,18 +9,21 @@ const User = require('../models/user');
 
 const neuralNetworkRouter = module.exports = new Router();
 
-// user must be logged in to perform any actions on a saved network
+// user must be logged in to perform any actions on a saved network/save a network
 neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
   // console.log(request.body, `request body in POST`);
   // return new NeuralNetwork({
   //   neuralNetwork: request.body.neuralNetwork,
   // }).save()
 
-  // need to add the neuralNetwork to the user's array of networks
+  // need to add the neuralNetwork created through WaveRouter to the user's array of networks
   return User.findOne({_id: request.user._id})
     .then(user => {
+      if(user.neuralNetworks.length > 2){
+        throw new Error('You must delete a neural network before you can save another');
+      }
       user.neuralNetworks.push(request.body._id);
-    })
+    }).save()
     .then(network => response.json(network))
     .catch(next);
 });
