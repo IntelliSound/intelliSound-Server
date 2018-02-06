@@ -66,7 +66,7 @@ User.create = (username, email, password) => {
         email,
         passwordHash,
         tokenSeed,
-        neuralNetworks: new neuralNetwork({}),
+        neuralNetworks: [],
       }).save();
     });
 };

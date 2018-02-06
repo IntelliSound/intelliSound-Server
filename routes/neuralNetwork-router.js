@@ -13,6 +13,7 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
   return new neuralNetwork({
     neuralNetwork: request.body.neuralNetwork,
   }).save()
+  // need to add the neuralNetwork to the user's array of networks
     .then(network => response.json(network))
     .catch(next);
 });
