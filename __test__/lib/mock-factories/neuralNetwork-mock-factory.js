@@ -11,13 +11,10 @@ neuralNetworkMockFactory.create = () => {
   return userMockFactory.create()
     .then(user => {
       mock.user = user;
-      return new neuralNetwork({
+      return mock.user.neuralNetwork = new neuralNetwork({
         neuralNetwork: placeholderNetwork,
-      }).save();
-    })
-    .then(network => {
-      mock.neuralNetwork = network;
-      return mock;
+      }).save()
+        .then(mock => {return mock;});
     });
 };
 

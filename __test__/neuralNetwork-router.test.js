@@ -28,8 +28,50 @@ describe(`Neural Network Router`, () => {
         .then(response => {
           expect(response.status).toEqual(200);
           expect(response.body._id).toBeTruthy();
-        })
-        .catch(console.log('broke'));
+        });
     });
   });
+
+  describe(`neural network GET request`, () => {
+    test(`neural network GET request should return a 200 status and all of the user's networks if there are no errors`, () => {
+      let tempUserMock = {};
+      return userMockFactory.create()
+        .then(response => {
+          tempUserMock.user = response.user;
+          tempUserMock.token = response.token;
+          return superagent.get(`${API_URL}/network`)
+            .set('Authorization', `Bearer ${tempUserMock.token}`);
+        });
+    });
+  });
+
+  describe(`neural network PUT request`, () => {
+    test(`neural network PUT request should return a 200 status and the updated network if there are no errors`, () => {
+      let tempUserMock = {};
+      return userMockFactory.create()
+        .then(response => {
+          tempUserMock.user = response.user;
+          tempUserMock.token = response.token;
+          return superagent.put(`${API_URL}/network/${tempUserMock.user.neuralNetwork._id}`)
+            .set('Authorization', `Bearer ${tempUserMock.token}`)
+            .send({neuralNetwork: placeholderNetwork});
+        })
+        .then(response => {
+          expect(response.status).toEqual(200);
+        });
+    });
+  });
+
+  // describe(`neural network DELETE request`, () => {
+  //   test(`neural network DELETE request should return a 204 status if there are no errors`, () => {
+  //     let tempUserMock = {};
+  //     return userMockFactory.create()
+  //       .then(response => {
+  //         tempUserMock.user = response.user;
+  //         tempUserMock.token = response.token;
+  //         return superagent.get(`${API_URL}/network`)
+  //           .set('Authorization', `Bearer ${tempUserMock.token}`);
+  //       });
+  //   });
+  // });
 });
