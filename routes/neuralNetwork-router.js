@@ -10,11 +10,9 @@ const neuralNetwork = require('../models/neuralNetwork');
 const neuralNetworkRouter = module.exports = new Router();
 
 // user must be logged in to perform any actions on a saved network
-neuralNetworkRouter.post(`/network`, bearerAuthMiddleware, upload.any(), (request, response, next) => {
-  console.log(request.body);
-  if(request.files.length > 1 || request.files[0].fieldname !== 'wav'){ // if things break double check fieldnames match between frontend & backend
-    return next(new httpErrors(400, `__ERROR__ invalid request`));
-  }
+neuralNetworkRouter.post(`/network`, bearerAuthMiddleware, (request, response, next) => {
+  console.log(`groot`);
+  // console.log(request.body, `request body in network POST request`);
   return new neuralNetwork({
     neuralNetwork: request.body,
   }).save()
@@ -33,5 +31,5 @@ neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, r
     .catch(next);
 });
 
-neuralNetworkRouter.put('/network/:networkID');
-neuralNetworkRouter.delete('/network/:networkID');
+neuralNetworkRouter.put('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});
+neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});
