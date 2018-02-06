@@ -137,3 +137,16 @@
 {"level":"info","message":"responding with a 409 status","timestamp":"2018-02-06T23:21:17.760Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:21:17.806Z"}
 {"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:21:22.220Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-06T23:25:19.183Z"}
+{"level":"info","message":"responding with a 409 status","timestamp":"2018-02-06T23:25:19.236Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:25:19.281Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:25:42.568Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-06T23:25:43.030Z"}
+{"level":"info","message":"responding with a 409 status","timestamp":"2018-02-06T23:25:43.063Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:25:43.096Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-06T23:26:17.506Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:26:17.603Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:30:25.430Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-06T23:30:28.443Z"}
+{"level":"info","message":"responding with a 409 status","timestamp":"2018-02-06T23:30:28.477Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:30:28.508Z"}
