@@ -13,7 +13,7 @@ describe('Neural Network Test', () => {
         const parsedFile = waveParser(data);
         parsedFile.neuralTransformedArray = neuralNetwork(parsedFile);
         console.log(parsedFile.neuralTransformedArray);
-        fsx.writeFile('temp/transformed.wav', waveWriter(parsedFile));
+        fsx.writeFile(`${__dirname}/temp/transformed2.wav`, waveWriter(parsedFile));
         expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
       });
   });
