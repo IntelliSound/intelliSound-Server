@@ -1,8 +1,8 @@
 'use strict';
 
-const User = require('../../models/user');
+const User = require('../../../models/user');
 const faker = require('faker');
-
+const neuralNetworkMockFactory = require('./neuralNetwork-mock-factory');
 const userMockFactory = module.exports = {};
 
 userMockFactory.create = () => {
