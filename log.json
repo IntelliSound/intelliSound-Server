@@ -1,0 +1,53 @@
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:28:12.305Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:28:12.378Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:28:12.382Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:28:53.715Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:28:53.770Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:28:53.774Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:29:47.702Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:29:47.761Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:29:47.766Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:30:14.143Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:30:14.199Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:30:14.206Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:43:07.189Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:43:07.253Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:43:07.256Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T20:51:10.033Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T20:51:10.093Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T20:51:10.097Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:09:16.772Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:10:04.055Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:10:30.341Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:34:50.747Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T21:43:32.986Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:03:14.955Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:03:59.103Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:06:08.615Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:07:42.163Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:07:59.331Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:10:58.448Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:12:52.381Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:13:39.680Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:15:10.777Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:31:12.562Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:36:21.726Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:36:47.406Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:37:54.597Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:39:13.942Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:39:41.740Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:40:08.353Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:44:47.493Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:45:36.166Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:45:51.816Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T22:45:51.850Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:46:19.589Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:47:59.914Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T22:47:59.950Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:51:33.281Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:53:01.295Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:53:23.278Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:53:51.779Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:54:43.827Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:55:23.881Z"}
+{"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:57:01.065Z"}
