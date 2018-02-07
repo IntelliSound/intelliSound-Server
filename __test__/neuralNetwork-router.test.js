@@ -40,6 +40,7 @@ describe(`Neural Network Router`, () => {
         .then(response => {
           tempUserMock.user = response.user;
           tempUserMock.token = response.token;
+          console.log(tempUserMock.user, `user in the test router`);
           return superagent.get(`${API_URL}/network`)
             .set(`Authorization`, `Bearer ${tempUserMock.token}`);
         })
