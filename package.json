@@ -27,8 +27,7 @@
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest": "^22.1.4",
-    "superagent": "^3.8.2",
-    "synaptic": "^1.1.4"
+    "superagent": "^3.8.2"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
