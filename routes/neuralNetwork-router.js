@@ -25,22 +25,21 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
 });
 
 neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, next) => {
-  console.log(request.user._id, `is the user is in the router`);
   User.findById(request.user._id)
     .then(user => {
-      console.log(user, `is the user I found`);
+      console.log(user, `the user I foundByID`);
       if(!user){
         throw new httpErrors(404, `__ERROR__ user not found`);
       }
       let neuralNetworkArray = user.neuralNetworks;
-      console.log(neuralNetworkArray, `the array of networks`);
       response.json(neuralNetworkArray);
     })
     .catch(next);
 });
 
 neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findByIdAndUpdate(request.params.networkID, request.body)
+  let options = {new: true};
+  NeuralNetwork.findByIdAndUpdate(request.params.networkID, request.body, options)
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);

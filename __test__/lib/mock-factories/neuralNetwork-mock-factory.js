@@ -2,10 +2,10 @@
 
 require('synaptic');
 const neuralNetwork = require('../../../models/neuralNetwork');
-const testArray = require('../testNetwork');
-const placeholderNetwork = JSON.stringify(testArray);
+const testNetwork = require('../testNetwork');
+const placeholderNetwork = JSON.stringify(testNetwork);
 const userMockFactory = require('./user-mock-factory');
-// const User = require('../../../models/user');
+const User = require('../../../models/user');
 const neuralNetworkMockFactory = module.exports = {};
 
 neuralNetworkMockFactory.create = () => {
@@ -21,8 +21,9 @@ neuralNetworkMockFactory.create = () => {
         .then(network => {
           mock.netArray.push(network._id);
           mock.networkID = network._id;
+          let options = {new: true};
+          User.findByIdAndUpdate(mock.user._id, {neuralNetworks: [...mock.netArray]}, options);
           return mock;
-          // return User.findByIdAndUpdate(mock.user._id, {neuralNetworks: [...mock.netArray]});
         });
     });
 };
