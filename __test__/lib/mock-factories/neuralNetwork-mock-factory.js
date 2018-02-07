@@ -12,6 +12,7 @@ neuralNetworkMockFactory.create = () => {
   let mock = {};
   return userMockFactory.create()
     .then(response => {
+      mock.token = response.token;
       mock.user = response.user;
       mock.netArray = response.user.neuralNetworks;
       return new neuralNetwork({

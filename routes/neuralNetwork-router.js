@@ -25,12 +25,16 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
 });
 
 neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findOne({user: request.user._id})
-    .then(network => {
-      if(!network){
-        throw new httpErrors(404, `__ERROR__ network not found`);
+  console.log(request.user._id, `is the user is in the router`);
+  User.findById(request.user._id)
+    .then(user => {
+      console.log(user, `is the user I found`);
+      if(!user){
+        throw new httpErrors(404, `__ERROR__ user not found`);
       }
-      return network;
+      let neuralNetworkArray = user.neuralNetworks;
+      console.log(neuralNetworkArray, `the array of networks`);
+      response.json(neuralNetworkArray);
     })
     .catch(next);
 });
@@ -52,7 +56,7 @@ neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
       }
-      response.sendStatus(204);  
+      response.sendStatus(204);
     })
     .catch(next);
 });
