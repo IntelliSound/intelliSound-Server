@@ -14,7 +14,6 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
   return User.findOne({_id: request.user._id})
     .then(user => {
-      console.log(user, `user in the actual router`);
       if(user.neuralNetworks.length > 2){
         throw new Error('You must delete a neural network before you can save another');
       }
@@ -25,18 +24,21 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
 });
 
 neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findOne({user: request.user._id})
-    .then(network => {
-      if(!network){
-        throw new httpErrors(404, `__ERROR__ network not found`);
+  User.findById(request.user._id)
+    .then(user => {
+      console.log(user, `the user I foundByID`);
+      if(!user){
+        throw new httpErrors(404, `__ERROR__ user not found`);
       }
-      return network;
+      let neuralNetworkArray = user.neuralNetworks;
+      response.json(neuralNetworkArray);
     })
     .catch(next);
 });
 
 neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findByIdAndUpdate(request.params.networkID, request.body)
+  let options = {new: true};
+  NeuralNetwork.findByIdAndUpdate(request.params.networkID, request.body, options)
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
@@ -52,7 +54,7 @@ neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
       }
-      response.sendStatus(204);  
+      response.sendStatus(204);
     })
     .catch(next);
 });
