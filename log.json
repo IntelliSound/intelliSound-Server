@@ -258,3 +258,5 @@
 {"level":"info","message":"There's a DELETE on /network/5a7a62e12a95bac164b9d2c7","timestamp":"2018-02-07T02:22:25.602Z"}
 {"level":"info","message":"There's a PUT on /network/5a7a64629047e4c241be36d6","timestamp":"2018-02-07T02:28:50.939Z"}
 {"level":"info","message":"There's a DELETE on /network/5a7a64639047e4c241be36d9","timestamp":"2018-02-07T02:28:51.033Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a65566ae5efc3265cb07d","timestamp":"2018-02-07T02:32:54.224Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a65566ae5efc3265cb080","timestamp":"2018-02-07T02:32:54.307Z"}
