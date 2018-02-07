@@ -19,8 +19,8 @@ neuralNetworkMockFactory.create = () => {
       }).save()
         .then(network => {
           mock.netArray.push(network._id);
-          console.log(mock.user);
-          return mock.user;
+          mock.networkID = network._id;
+          return mock;
           // return User.findByIdAndUpdate(mock.user._id, {neuralNetworks: [...mock.netArray]});
         });
     });
