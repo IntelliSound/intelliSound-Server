@@ -371,3 +371,9 @@
 {"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T05:11:46.070Z"}
 {"level":"info","message":"There's a PUT on /network/5a7a8a921c868bccddc919b6","timestamp":"2018-02-07T05:11:46.139Z"}
 {"level":"info","message":"There's a DELETE on /network/5a7a8a921c868bccddc919b9","timestamp":"2018-02-07T05:11:46.213Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T17:09:31.240Z"}
+{"level":"info","message":"There's a PUT on /network/5a7b32cb510c17e1a18aee0d","timestamp":"2018-02-07T17:09:31.314Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7b32cb510c17e1a18aee10","timestamp":"2018-02-07T17:09:31.388Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T17:11:06.547Z"}
+{"level":"info","message":"There's a PUT on /network/5a7b332a7af63fe1d0efe864","timestamp":"2018-02-07T17:11:06.615Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7b332a7af63fe1d0efe867","timestamp":"2018-02-07T17:11:06.687Z"}

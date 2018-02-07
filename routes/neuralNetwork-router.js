@@ -14,7 +14,6 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
   return User.findOne({_id: request.user._id})
     .then(user => {
-      console.log(user, `user in the actual router`);
       if(user.neuralNetworks.length > 2){
         throw new Error('You must delete a neural network before you can save another');
       }
