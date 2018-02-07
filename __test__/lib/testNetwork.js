@@ -1,5 +1,4 @@
 const {Layer, Network} = require('synaptic');
-module.exports = {};
 
 let inputLayer = new Layer(2);
 let hiddenLayer = new Layer(3);
