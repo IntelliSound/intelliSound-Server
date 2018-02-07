@@ -11,7 +11,6 @@ const neuralNetworkRouter = module.exports = new Router();
 
 // user must be logged in to perform any actions on a saved network/save a network
 neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
-  // console.log(request.body, `request body in POST`);
   // return new NeuralNetwork({
   //   neuralNetwork: request.body.neuralNetwork,
   // }).save()
@@ -30,7 +29,6 @@ neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request,
 
 neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetwork.findOne({user: request.user._id})
-    // .then(console.log(request.user, `user`))
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
@@ -40,6 +38,9 @@ neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, ne
     .catch(next);
 });
 
-neuralNetworkRouter.put('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});
+neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware, (request, response, next) => {
+  NeuralNetwork.findById(request.params.networkID)
+    .then();
+});
 
-neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});
+// neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});

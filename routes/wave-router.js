@@ -5,9 +5,7 @@ const multer = require('multer');
 const upload = multer({dest: `${__dirname}/../temp`});
 const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
 const NeuralNetworkModel = require('../models/neuralNetwork');
-// think we need to export the network as json from the neural-net file
 const ActualNeuralNetwork = require('../lib/neural-net');
-console.log(ActualNeuralNetwork, `the neural network`);
 
 const WaveRouter = module.exports = new Router();
 

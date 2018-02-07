@@ -51,3 +51,123 @@
 {"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:54:43.827Z"}
 {"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:55:23.881Z"}
 {"level":"info","message":"There's a POST on /wave","timestamp":"2018-02-06T22:57:01.065Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:46:55.185Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:46:55.202Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:46:55.236Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:46:55.239Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:48:01.590Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:48:01.611Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:48:01.645Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:48:01.648Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:48:36.899Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:48:36.916Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:48:36.950Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:48:36.953Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:50:52.589Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:50:52.607Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:50:52.641Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:50:52.645Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:51:11.081Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:51:11.099Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:51:11.143Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:51:11.146Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:53:53.031Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-06T23:53:53.048Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-06T23:53:53.083Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-06T23:53:53.086Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:09:22.971Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:09:22.992Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:09:23.038Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:09:23.041Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:10:22.658Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:10:22.676Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:10:22.710Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:10:22.713Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:11:04.677Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:11:04.695Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:11:04.730Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:11:04.733Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:11:47.386Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:11:47.464Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:11:47.505Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:11:47.508Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:12:36.194Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:12:36.212Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:12:36.247Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:12:36.250Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:12:57.740Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:12:57.758Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:12:57.793Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:12:57.797Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:13:21.782Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:13:21.800Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:13:21.835Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:13:21.838Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:15:43.388Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:15:43.406Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:15:43.440Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:15:43.443Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:16:36.045Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:16:36.121Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:16:36.164Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:16:36.168Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:25:06.481Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:25:06.498Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:25:06.533Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:25:06.536Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:27:41.904Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:27:41.987Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:27:42.035Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:27:42.039Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:29:43.582Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:29:43.600Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:29:43.636Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:29:43.639Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:30:35.688Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:30:35.706Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:30:35.746Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:30:35.749Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:30:48.302Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:30:48.319Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:30:48.354Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:30:48.357Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:32:29.407Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:32:29.426Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:32:29.462Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:32:29.465Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:34:19.183Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:34:19.201Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:34:19.236Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:34:19.239Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:39:43.369Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:39:43.387Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:39:43.423Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:39:43.427Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:43:22.187Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:43:22.205Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:43:22.240Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:43:22.243Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:43:54.514Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:43:54.533Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:43:54.570Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:43:54.573Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:45:38.127Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:45:38.144Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:45:38.178Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:45:38.181Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:46:34.132Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:46:34.212Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:46:34.256Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:46:34.262Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:46:59.546Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:46:59.563Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:46:59.598Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:46:59.601Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:48:02.861Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:48:02.878Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:48:02.913Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:48:02.916Z"}
+{"level":"info","message":"There's a POST on /network","timestamp":"2018-02-07T00:48:36.881Z"}
+{"level":"info","message":"responding with a 500 status: general error","timestamp":"2018-02-07T00:48:36.899Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-07T00:48:36.935Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-07T00:48:36.939Z"}

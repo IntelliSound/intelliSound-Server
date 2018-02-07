@@ -23,7 +23,7 @@ describe(`Neural Network Router`, () => {
           tempUserMock.token = response.token;
           return superagent.post(`${API_URL}/network`)
             .set('Authorization', `Bearer ${tempUserMock.token}`)
-            .send({neuralNetwork: placeholderNetwork});
+            .send({neuralNetwork: testNetwork});
         })
         .then(response => {
           expect(response.status).toEqual(200);
@@ -45,19 +45,19 @@ describe(`Neural Network Router`, () => {
     });
   });
 
-  describe(`neural network PUT request`, () => {
-    test(`neural network PUT request should return a 200 status and the updated network if there are no errors`, () => {
+  describe(`testing`, () => {
+    test(`braces don't line up`, () => {
       let tempUserMock = {};
       return userMockFactory.create()
         .then(response => {
           tempUserMock.user = response.user;
           tempUserMock.token = response.token;
-          return superagent.put(`${API_URL}/network/${tempUserMock.user.neuralNetwork._id}`)
-            .set('Authorization', `Bearer ${tempUserMock.token}`)
-            .send({neuralNetwork: placeholderNetwork});
-        })
-        .then(response => {
-          expect(response.status).toEqual(200);
+          return neuralNetworkMockFactory.create()
+            .then(response => {
+              console.log(response, `is the response`);
+              tempUserMock.user = response;
+              console.log(tempUserMock.user, `is the updated user`);
+            });
         });
     });
   });
