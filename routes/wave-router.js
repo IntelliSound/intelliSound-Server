@@ -5,13 +5,9 @@ const multer = require('multer');
 const upload = multer({dest: `${__dirname}/../temp`});
 const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
 const NeuralNetworkModel = require('../models/neuralNetwork');
-<<<<<<< HEAD
-const ActualNeuralNetwork = require('../lib/neural-net');
-=======
 // think we need to export the network as json from the neural-net file
 const neuralPredictor = require('../lib/neural-net');
 
->>>>>>> 7c059d17ed9d1e89c8bc894e871622d8145ce25a
 
 const WaveRouter = module.exports = new Router();
 
@@ -22,11 +18,7 @@ WaveRouter.post('/wave', upload.any(), (request, response, next) => {
     return next(new httpErrors(400, `__ERROR__ only one file can be uploaded at a time`));
   }
   return new NeuralNetworkModel({
-<<<<<<< HEAD
-    neuralNetwork: ActualNeuralNetwork,
-=======
     neuralNetwork: neuralPredictor,
->>>>>>> 7c059d17ed9d1e89c8bc894e871622d8145ce25a
   })
     .then(network => {
       response.json(network._id);
