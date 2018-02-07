@@ -37,11 +37,22 @@ neuralNetworkRouter.get('/network', bearerAuthMiddleware, (request, response, ne
 
 neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   NeuralNetwork.findByIdAndUpdate(request.params.networkID, request.body)
-    .then(network => response.json(network))
+    .then(network => {
+      if(!network){
+        throw new httpErrors(404, `__ERROR__ network not found`);
+      }
+      response.json(network);
+    })
     .catch(next);
 });
 
 neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
-  console.log(request.params.networkID, `is the id to remove`);
-  // NeuralNetwork.findByIdAndRemove(request.params.networkID);
+  NeuralNetwork.findByIdAndRemove(request.params.networkID)
+    .then(network => {
+      if(!network){
+        throw new httpErrors(404, `__ERROR__ network not found`);
+      }
+      response.sendStatus(204);  
+    })
+    .catch(next);
 });
