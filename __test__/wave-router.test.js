@@ -13,12 +13,12 @@ describe(`Wave Router tests`, () => {
   beforeAll(server.start);
   afterAll(server.stop);
 
-  describe(`Wave Router POST request`, () => {
-    test(`wave file POST request should return 200, a networkID, and a new wave file if there are no errors`, () => {
-      return superagent.post(`${API_URL}/wave`)
-        .field('wavename', 'random')
-        .attach('wave', `${__dirname}/assets/Broken_Robot5.wav`);
-      // .then(response => console.log(response, `is the response`));
-    });
-  });
+  // describe(`Wave Router POST request`, () => {
+  //   test(`wave file POST request should return 200, a networkID, and a new wave file if there are no errors`, () => {
+  //     return superagent.post(`${API_URL}/wave`)
+  //       .field('wavename', 'random')
+  //       .attach('wave', `${__dirname}/assets/Broken_Robot5.wav`);
+  //     // .then(response => console.log(response, `is the response`));
+  //   });
+  // });
 });

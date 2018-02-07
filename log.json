@@ -244,3 +244,15 @@
 {"level":"info","message":"There's a PUT on /network/5a7a6020baf32fbf73c918ba","timestamp":"2018-02-07T02:10:40.242Z"}
 {"level":"info","message":"There's a PUT on /network/5a7a603fc74bd7bf9e6f8ed9","timestamp":"2018-02-07T02:11:11.824Z"}
 {"level":"info","message":"There's a PUT on /network/5a7a6064646124bfc35075e1","timestamp":"2018-02-07T02:11:48.576Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a620a72ac66c0b4e14452","timestamp":"2018-02-07T02:18:50.776Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a620a72ac66c0b4e14455","timestamp":"2018-02-07T02:18:50.856Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-07T02:18:50.857Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a622511b6c9c0dbc7c6ed","timestamp":"2018-02-07T02:19:17.367Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a622511b6c9c0dbc7c6f0","timestamp":"2018-02-07T02:19:17.451Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-07T02:19:17.452Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a626861c618c10827f5be","timestamp":"2018-02-07T02:20:24.873Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a626861c618c10827f5c1","timestamp":"2018-02-07T02:20:24.957Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a62c1aa63a1c13a66fe89","timestamp":"2018-02-07T02:21:53.145Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a62c1aa63a1c13a66fe8c","timestamp":"2018-02-07T02:21:53.226Z"}
+{"level":"info","message":"There's a PUT on /network/5a7a62e12a95bac164b9d2c4","timestamp":"2018-02-07T02:22:25.519Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7a62e12a95bac164b9d2c7","timestamp":"2018-02-07T02:22:25.602Z"}

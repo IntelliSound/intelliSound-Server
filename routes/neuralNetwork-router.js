@@ -41,4 +41,7 @@ neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware,
     .catch(next);
 });
 
-// neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {});
+neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
+  console.log(request.params.networkID, `is the id to remove`);
+  // NeuralNetwork.findByIdAndRemove(request.params.networkID);
+});
