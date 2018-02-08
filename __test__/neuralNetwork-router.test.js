@@ -67,7 +67,7 @@ describe(`Neural Network Router`, () => {
             .then(response => {
               tempUserMock.user = response.user;
               tempUserMock.networkID = response.networkID;
-              return superagent.put(`${API_URL}/network/${tempUserMock.networkID}`)
+              return superagent.put(`${API_URL}/network/${tempUserMock.networkID}/${sawWaveToTest}`)
                 .set('Authorization', `Bearer ${tempUserMock.token}`)
                 .send({neuralNetwork: placeholderNetwork});
             });
