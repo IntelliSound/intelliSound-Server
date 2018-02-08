@@ -57,28 +57,29 @@ describe(`Neural Network Router`, () => {
   });
 
 
-  // describe(`neural network PUT/:neuralnetworkID/:wavename request`, () => {
-  //   test(`neural network PUT request should return a 200 status if there are no errors`, () => {
-  //     let tempUserMock = {};
-  //     return userMockFactory.create()
-  //       .then(response => {
-  //         tempUserMock.user = response.user;
-  //         tempUserMock.token = response.token;
-  //         return neuralNetworkMockFactory.create()
-  //           .then(response => {
-  //             tempUserMock.user = response.user;
-  //             tempUserMock.networkID = response.networkID;
-  //             return superagent.put(`${API_URL}/neuralnetwork/${tempUserMock.networkID}/${triWaveToTest}`)
-  //               .set('Authorization', `Bearer ${tempUserMock.token}`)
-  //               .send({neuralNetwork: placeholderNetwork});
-  //           });
-  //       })
-  //       .then(response => {
-  //         expect(response.status).toEqual(200);
-  //         expect(response.body.neuralNetwork).toBeTruthy();
-  //         expect(response.body._id).toBeTruthy();
-  //       });
-  //   });
+  describe(`neural network PUT/:neuralnetworkID/:wavename request`, () => {
+    test(`neural network PUT request should return a 200 status if there are no errors`, () => {
+      let tempUserMock = {};
+      return userMockFactory.create()
+        .then(response => {
+          tempUserMock.user = response.user;
+          tempUserMock.token = response.token;
+          return neuralNetworkMockFactory.create()
+            .then(response => {
+              tempUserMock.user = response.user;
+              tempUserMock.networkID = response.networkID;
+              return superagent.put(`${API_URL}/neuralnetwork/${tempUserMock.networkID}/${triWaveToTest}`)
+                .set('Authorization', `Bearer ${tempUserMock.token}`)
+                .send({neuralNetwork: placeholderNetwork});
+            });
+        })
+        .then(response => {
+          expect(response.status).toEqual(200);
+          expect(response.body.neuralNetwork).toBeTruthy();
+          expect(response.body._id).toBeTruthy();
+        });
+    });
+  });
 
   // test(`neural network PUT request should return a 200 status if there are no errors`, () => {
   //   let tempUserMock = {};
