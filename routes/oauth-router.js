@@ -10,6 +10,7 @@ const oauthRouter = module.exports = new Router();
 
 const GOOGLE_OAUTH_URL = 'https://www.googleapis.com/oauth2/v4/token';
 const OPEN_ID_URL = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
+const GOOGLE_CLIENT_ID_JSON = {'web':{'client_id':'1009680303973-ctmukkrculf9p3e4i3gr4e54558tjfbr.apps.googleusercontent.com','project_id':'intellisoundai','auth_uri':'https://accounts.google.com/o/oauth2/auth','token_uri':'https://accounts.google.com/o/oauth2/token','auth_provider_x509_cert_url':'https://www.googleapis.com/oauth2/v1/certs','client_secret':'tzzD6iWBaxTmGGupU0Qhc-MB','redirect_uris':['https://intellisoundai.com/login'],'javascript_origins':['https://intellisoundai.com']}};
 
 oauthRouter.get('/oauth/google',(request,response,next) => {
   if(!request.query.code){
@@ -40,7 +41,7 @@ oauthRouter.get('/oauth/google',(request,response,next) => {
       .then(response => {
         logger.log('info','redirected back from open id');
         logger.log('info',`profile: ${response.body}`);
-        return User.handleGoogleAuth(response.body); // vinicio - step five
+        return User.handleGoogleAuth(response.body);
       })
       .then(user => user.createToken())
       .then(token => {
