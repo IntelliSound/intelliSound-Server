@@ -1,6 +1,7 @@
 'use strict';
 
 const {Router} = require('express');
+const fsx = require('fs-extra');
 const httpErrors = require('http-errors');
 const jsonParser = require('body-parser').json();
 const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
@@ -14,37 +15,50 @@ const waveWriter = require('../lib/wave-writer');
 const neuralNetworkRouter = module.exports = new Router();
 
 // user must be logged in to perform any actions on a saved network/save a network
-neuralNetworkRouter.post(`/network/:waveName`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
 
   // Check where this error is handled or if it needs to be refactored
-  if (!request.params.waveName){
+  if (!request.params.wavename){
     throw new httpErrors('__ERROR__', 'User must select a wave to use');
   }
+  if (!request.params.neuralnetname){
+    throw new httpErrors('__ERROR__', 'Network must have a name');
+  }
 
-  const path = `${__dirname}/../assets/${request.params.waveName}.wav`;
+  const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
   let neuralGeneratedFile = null;
+  let newNeuralNetwork = null;
 
   return fsx.readFile(path)
     .then(data => {
-      parsedFile = waveParser(data);
+      let parsedFile = waveParser(data);
       parsedFile = neuralNetwork(parsedFile);
-      
+      neuralGeneratedFile = waveWriter(parsedFile);
 
+      return new NeuralNetworkModel({
+        neuralNetwork: parsedFile.neuralNet,
+        name: request.params.neuralnetname,
+      }).save()
+        .then(network => {
+          newNeuralNetwork = network;
+          //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
+          return User.findOne({_id: request.user._id})
+            .then(user => {
         
-  //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
-  return User.findOne({_id: request.user._id})
-    .then(user => {
+              logger.log(user, `user in the actual router`);
+              user.neuralNetworks.push(newNeuralNetwork._id);
+            }).save()
+            .then(() => response.json({newNeuralNetwork, neuralGeneratedFile}))
+            .catch(next);
 
-      logger.log(user, `user in the actual router`);
-      user.neuralNetworks.push(request.body._id);
-    }).save()
-    .then(network => response.json(network))
-    .catch(next);
+        });
+    });
+        
 });
 
 
-neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetworkModel.findById(request.params.networkID)
     .then(network => {
       if(!network){
@@ -57,7 +71,7 @@ neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, r
 });
 
 
-neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.put('/neuralnetwork/:networkID/:waveName', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   let options = {isNew : true};
   let networkToUpdate = request.body;
 
@@ -78,7 +92,7 @@ neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthM
 });
 
 
-neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.delete('/neuralnetwork/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetworkModel.findByIdAndRemove(request.params.networkID)
     .then(network => {
       if(!network){
