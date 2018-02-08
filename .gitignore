@@ -6,7 +6,6 @@ db
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
-temp/
 
 # KDE directory preferences
 .directory
@@ -97,7 +96,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-temp
+
 
 # Directories potentially created on remote AFP share
 .AppleDB
