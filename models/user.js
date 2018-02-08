@@ -48,6 +48,7 @@ userSchema.methods.createToken = function(){
   this.tokenSeed = crypto.randomBytes(64).toString('hex');
   return this.save()
     .then(user => {
+      console.log('createtoken user: ', user);
       return jsonWebToken.sign({
         tokenSeed: user.tokenSeed,
       }, process.env.SECRET_SALT);
@@ -73,14 +74,13 @@ User.create = (username, email, password) => {
 
 User.handleGoogleAuth = googlePlusProfile => { //nicholas TODO: refactor user to have all three specific oauths
 
-  console.log('googlePlusProfile: ', googlePlusProfile);
-
+  logger.log('info', 'user.handleGoogleAuth');
   return User.findOne({email: googlePlusProfile.email})
     .then(account => {
       if(account){
-        if(account.googleOAuth)
-          return account;
-
+        if(account.OAuth)
+          return account; //TODO: remove- nicholas- this is being hit propperly
+        logger.log('info', 'error- an account was found but not connected to google');
         throw new Error('An account was found ,but it was not connected to Google');
       }
 
@@ -93,5 +93,10 @@ User.handleGoogleAuth = googlePlusProfile => { //nicholas TODO: refactor user to
         tokenSeed: crypto.randomBytes(64).toString('hex'),
         OAuth: true,
       }).save();
+    })
+    .catch(error => {
+      console.log(error);
+      logger.log('info', error);
+      next();
     });
 };
