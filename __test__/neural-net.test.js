@@ -22,7 +22,6 @@ describe('Neural Network Test', () => {
           .then(data => {
             let triWave = waveParser(data);
             triWave = neuralNetwork(triWave, parsedFile.neuralNet);
-            console.log(triWave);
             fsx.writeFile(outputFilePath, waveWriter(triWave));
             expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
             expect(triWave.neuralTransformedArray.length).toBeTruthy();
