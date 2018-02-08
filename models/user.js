@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 const jsonWebToken = require('jsonwebtoken');
 const httpErrors = require('http-errors');
-const neuralNetwork = require('./neuralNetwork');
+const logger = require('../lib/logger');
 
 const userSchema = mongoose.Schema({
   username: {
@@ -67,6 +67,31 @@ User.create = (username, email, password) => {
         passwordHash,
         tokenSeed,
         neuralNetworks: [],
+      }).save();
+    });
+};
+
+User.handleGoogleAuth = googlePlusProfile => { //nicholas TODO: refactor user to have all three specific oauths
+
+  console.log('googlePlusProfile: ', googlePlusProfile);
+
+  return User.findOne({email: googlePlusProfile.email})
+    .then(account => {
+      if(account){
+        if(account.googleOAuth)
+          return account;
+
+        throw new Error('An account was found ,but it was not connected to Google');
+      }
+
+      logger.log('info','creating new account with oauth');
+
+      return new User({
+        username: googlePlusProfile.email.split('@')[0],
+        email: googlePlusProfile.email,
+        passwordHash: crypto.randomBytes(64).toString('hex'),
+        tokenSeed: crypto.randomBytes(64).toString('hex'),
+        OAuth: true,
       }).save();
     });
 };
