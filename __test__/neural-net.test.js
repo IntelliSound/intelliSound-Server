@@ -16,8 +16,6 @@ describe('Neural Network Test', () => {
         parsedFile = waveParser(data);
         parsedFile = neuralNetwork(parsedFile);
 
-        // Andrew - make sure you create a temp folder in the __test__ folder, fs does not
-        //          automatically create the folder, and temp is gitignored.
         return fsx.readFile(inputFilePath2)
           .then(data => {
             let triWave = waveParser(data);
@@ -27,5 +25,5 @@ describe('Neural Network Test', () => {
             expect(triWave.neuralTransformedArray.length).toBeTruthy();
           });
       });
-  }, 15000);
+  }, 150000);
 });
