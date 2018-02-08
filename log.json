@@ -91,3 +91,64 @@
 {"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T21:27:47.305Z"}
 {"level":"info","message":"There's a GET on /neuralnetwork/me","timestamp":"2018-02-08T21:27:48.322Z"}
 {"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-08T21:27:48.323Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:38:21.891Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd16c404a50a6e20baff4","timestamp":"2018-02-08T22:38:36.900Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd16c404a50a6e20baff7/tri","timestamp":"2018-02-08T22:38:36.977Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T22:38:37.037Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:41:25.153Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd22303e70da7764d8d8e","timestamp":"2018-02-08T22:41:39.062Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd22303e70da7764d8d91/tri","timestamp":"2018-02-08T22:41:39.150Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T22:41:39.209Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:46:46.287Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd365a3935ca81f0832e8","timestamp":"2018-02-08T22:47:01.951Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd366a3935ca81f0832eb/tri","timestamp":"2018-02-08T22:47:02.054Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:49:11.210Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd3f4b9eb06a87db9fe90","timestamp":"2018-02-08T22:49:24.120Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd3f4b9eb06a87db9fe93/tri","timestamp":"2018-02-08T22:49:24.207Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:51:48.507Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd495e653e0a8f0d14193","timestamp":"2018-02-08T22:52:05.966Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd496e653e0a8f0d14196/tri","timestamp":"2018-02-08T22:52:06.045Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:53:59.413Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd5157a018ca947e58cf7","timestamp":"2018-02-08T22:54:13.919Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd5157a018ca947e58cfa/tri","timestamp":"2018-02-08T22:54:13.999Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T22:54:14.047Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:56:58.479Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd5c7758f77a9eb5491f3","timestamp":"2018-02-08T22:57:11.506Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd5c7758f77a9eb5491f6/tri","timestamp":"2018-02-08T22:57:11.604Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T22:59:58.078Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd67b9ad0f0aa707d548d","timestamp":"2018-02-08T23:00:11.669Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd67b9ad0f0aa707d5490/tri","timestamp":"2018-02-08T23:00:11.749Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:03:33.257Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd7528f73ffab25472233","timestamp":"2018-02-08T23:03:46.780Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd7528f73ffab25472236/tri","timestamp":"2018-02-08T23:03:46.875Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:11:02.842Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd914959edbac07e4745d","timestamp":"2018-02-08T23:11:16.493Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd914959edbac07e47460/tri","timestamp":"2018-02-08T23:11:16.580Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:12:18.475Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd960cf8fc7ac3d66513f","timestamp":"2018-02-08T23:12:32.022Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd960cf8fc7ac3d665142/tri","timestamp":"2018-02-08T23:12:32.108Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T23:12:32.166Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:13:17.310Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cd99a983dd6ac7ac28688","timestamp":"2018-02-08T23:13:30.511Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cd99a983dd6ac7ac2868b/tri","timestamp":"2018-02-08T23:13:30.584Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T23:13:30.645Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:16:35.593Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cda60471246ace68c8cfa","timestamp":"2018-02-08T23:16:48.494Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cda60471246ace68c8cfd/tri","timestamp":"2018-02-08T23:16:48.569Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T23:16:48.621Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:18:07.083Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cdabc11338cad2e130617","timestamp":"2018-02-08T23:18:20.295Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cdabc11338cad2e13061a/tri","timestamp":"2018-02-08T23:18:20.372Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T23:18:20.421Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:29:35.281Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cdd6c7d23b2aea8097357","timestamp":"2018-02-08T23:29:48.301Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cdd6c7d23b2aea809735a/tri","timestamp":"2018-02-08T23:29:48.376Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-08T23:29:48.418Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T23:30:05.567Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-08T23:30:05.657Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:32:49.789Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cde2f4b2b76af25d7cb60","timestamp":"2018-02-08T23:33:03.118Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cde2f4b2b76af25d7cb63/tri","timestamp":"2018-02-08T23:33:03.195Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T23:33:57.455Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cde7288a813af5d969682","timestamp":"2018-02-08T23:34:10.750Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cde7288a813af5d969685/tri","timestamp":"2018-02-08T23:34:10.826Z"}

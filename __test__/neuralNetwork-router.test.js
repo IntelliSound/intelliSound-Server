@@ -75,10 +75,10 @@ describe(`Neural Network Router`, () => {
         })
         .then(response => {
           expect(response.status).toEqual(200);
-          expect(response.body.neuralNetwork).toBeTruthy();
-          expect(response.body._id).toBeTruthy();
+          expect(response.body.newNeuralNetwork).toBeTruthy();
+          expect(response.body.neuralGeneratedFile).toBeTruthy();
         });
-    });
+    }, 100000);
   });
 
   // test(`neural network PUT request should return a 200 status if there are no errors`, () => {

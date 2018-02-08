@@ -1,6 +1,7 @@
 'use strict';
 
 const {Router} = require('express');
+const {Network} = require('synaptic');
 const fsx = require('fs-extra');
 const httpErrors = require('http-errors');
 const jsonParser = require('body-parser').json();
@@ -14,7 +15,7 @@ const waveWriter = require('../lib/wave-writer');
 
 const neuralNetworkRouter = module.exports = new Router();
 
-neuralNetworkRouter.post(`/neuralnetwork/save/`);
+neuralNetworkRouter.post(`/neuralnetwork/save/:neuralnetname`);
 
 // user must be logged in to perform any actions on a saved network/save a network
 neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
@@ -38,6 +39,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, jsonParser, 
       let parsedFile = waveParser(data);
       parsedFile = neuralNetwork(parsedFile);
       neuralGeneratedFile = waveWriter(parsedFile);
+      console.log(parsedFile.neuralNet);
       const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
 
       return new NeuralNetworkModel({
@@ -54,6 +56,9 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, jsonParser, 
     });
 });
 
+// neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, next) => {
+
+// });
 
 neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetworkModel.findById(request.params.networkID)
@@ -68,24 +73,37 @@ neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (requ
 });
 
 
-neuralNetworkRouter.put('/neuralnetwork/:networkID/:waveName', jsonParser, bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   let options = {isNew : true};
-  let networkToUpdate = request.body;
+  const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  let neuralGeneratedFile = null;
+  let foundNeuralNetwork = null;
+  let newNeuralNetwork = null;
 
   //Nicholas- set up networktoupdate and get ready to train
   //Nicholas- train net and return trained network
   //Nicholas- take trained net and run findByIdAndUpdate on it
 
-
-  NeuralNetworkModel.findByIdAndUpdate(request.params.networkID, networkToUpdate, options)
-
-    .then(network => {
-      if(!network){
-        throw new httpErrors(404, `__ERROR__ network not found`);
-      }
-      response.send(network);
-    })
-    .catch(next);
+  return NeuralNetworkModel.findById(request.params.networkID)
+    .then(foundNet => {
+      foundNeuralNetwork = Network.fromJSON(JSON.parse(foundNet.neuralNetwork));
+      console.log(foundNeuralNetwork);
+      return fsx.readFile(path)
+        .then(data => {
+          let parsedFile = waveParser(data);
+          parsedFile = neuralNetwork(parsedFile, foundNeuralNetwork);
+          neuralGeneratedFile = waveWriter(parsedFile);
+          const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
+          return NeuralNetworkModel.findByIdAndUpdate(request.params.networkID, neuralNetworkToSave, options);
+        })
+        .then(network => {
+          newNeuralNetwork = network;
+          request.user.neuralNetworks.push(newNeuralNetwork._id);
+          return User.findByIdAndUpdate(request.user._id, request.user);
+        })
+        .then(() => response.json({newNeuralNetwork, neuralGeneratedFile}))
+        .catch(next);
+    });
 });
 
 
