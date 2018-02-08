@@ -1,0 +1,58 @@
+{"level":"info","message":"There's a GET on /oauth/google?code=4/AADgtEXTqScpx6JC7RU757bPs52QbEXS47gCc3VS0aPs8RK6_pBqP5-O4wFOmy5SI1jfJnurq0WydwEOVUrJ_nE&authuser=0&session_state=f2705ac95a85557e938003d91bac571572b49abf..7df5&prompt=consent","timestamp":"2018-02-08T20:48:13.335Z"}
+{"level":"info","message":"code : 4/AADgtEXTqScpx6JC7RU757bPs52QbEXS47gCc3VS0aPs8RK6_pBqP5-O4wFOmy5SI1jfJnurq0WydwEOVUrJ_nE","timestamp":"2018-02-08T20:48:13.339Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T20:48:13.657Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T20:48:13.657Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T20:48:13.888Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T20:48:13.890Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T20:48:13.891Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/D-YnH6nbOUgpYlIVUui80EJO40wnkjfGKh9kUzYDQ4k&authuser=0&session_state=42723ff7e457941399113abf7bdbe8b61fbdbe0b..7eb0&prompt=consent","timestamp":"2018-02-08T20:49:11.824Z"}
+{"level":"info","message":"code : 4/D-YnH6nbOUgpYlIVUui80EJO40wnkjfGKh9kUzYDQ4k","timestamp":"2018-02-08T20:49:11.828Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T20:49:12.059Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T20:49:12.061Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T20:49:12.273Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T20:49:12.274Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T20:49:12.275Z"}
+{"error":{},"level":"info","message":"","timestamp":"2018-02-08T20:49:12.369Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/AAAuJiFHJ-x-n3q3O8-TEWlJu3SsHhf-QOhwrNGQGAJpzv0Hn3wkD3B17ZHZeQl9SJFeBSRCcEw4KwJffgSLKAE&authuser=0&session_state=18c82bde106cd70a9c28a1c2e909fef6df616a39..24ef&prompt=consent","timestamp":"2018-02-08T20:54:14.396Z"}
+{"level":"info","message":"code : 4/AAAuJiFHJ-x-n3q3O8-TEWlJu3SsHhf-QOhwrNGQGAJpzv0Hn3wkD3B17ZHZeQl9SJFeBSRCcEw4KwJffgSLKAE","timestamp":"2018-02-08T20:54:14.400Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T20:54:14.627Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T20:54:14.627Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T20:54:14.815Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T20:54:14.816Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T20:54:14.817Z"}
+{"error":{},"level":"info","message":"","timestamp":"2018-02-08T20:54:14.886Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/DIhn8Bh_igcdeSSZ7_DBH1SQmL5mbd4Xly-VhTSuopI&authuser=0&session_state=c5fee18fc39c3a37a4df4b564fafff99ffe53085..2a6e&prompt=consent","timestamp":"2018-02-08T20:56:13.164Z"}
+{"level":"info","message":"code : 4/DIhn8Bh_igcdeSSZ7_DBH1SQmL5mbd4Xly-VhTSuopI","timestamp":"2018-02-08T20:56:13.168Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T20:56:13.419Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T20:56:13.420Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T20:56:13.824Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T20:56:13.825Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T20:56:13.826Z"}
+{"message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at Object.module.exports [as sign] (/home/ncarignan/cf/401/projects/sound-machine/intelliSound-Server/node_modules/jsonwebtoken/sign.js:101:20)\n    at save.then.user (/home/ncarignan/cf/401/projects/sound-machine/intelliSound-Server/models/user.js:52:27)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:188:7)","level":"info","timestamp":"2018-02-08T20:56:13.872Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/QpcWDhmXKP7xwqvDZ_COlZtXA8HCeEVU8TF3FaSR65g&authuser=0&session_state=6c7e47e2ac35b19fffecfccfc9bfc1869e780dba..f1d2&prompt=consent","timestamp":"2018-02-08T20:58:03.144Z"}
+{"level":"info","message":"code : 4/QpcWDhmXKP7xwqvDZ_COlZtXA8HCeEVU8TF3FaSR65g","timestamp":"2018-02-08T20:58:03.147Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T20:58:03.344Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T20:58:03.344Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T20:58:03.690Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T20:58:03.692Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T20:58:03.693Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/me","timestamp":"2018-02-08T21:00:42.707Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-08T21:00:42.711Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/AABV6oVyGy1GRbJYCQ1rtohkCt9m48Ag2u2kIqDcxh3saLqMy--4FaOVhi1gqKiwb_ht_y61zlzXmKmneMv_2TA&authuser=0&session_state=0f5004893f4d57ebfc3bf70a4eebad274d060844..1a73&prompt=consent","timestamp":"2018-02-08T21:26:52.591Z"}
+{"level":"info","message":"code : 4/AABV6oVyGy1GRbJYCQ1rtohkCt9m48Ag2u2kIqDcxh3saLqMy--4FaOVhi1gqKiwb_ht_y61zlzXmKmneMv_2TA","timestamp":"2018-02-08T21:26:52.595Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T21:26:52.813Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T21:26:52.814Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T21:26:53.020Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T21:26:53.021Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T21:26:53.022Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/me","timestamp":"2018-02-08T21:26:53.623Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-08T21:26:53.624Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/24muQH1gUN_mFR6UkO3RwC7W0VgwyuMx879OT0Ge5-M&authuser=0&session_state=4dd9862a6eddaadc6a3fb61babd0547310ecf2d0..49d6&prompt=consent","timestamp":"2018-02-08T21:27:46.710Z"}
+{"level":"info","message":"code : 4/24muQH1gUN_mFR6UkO3RwC7W0VgwyuMx879OT0Ge5-M","timestamp":"2018-02-08T21:27:46.710Z"}
+{"level":"info","message":"redirected back from google oauth","timestamp":"2018-02-08T21:27:47.097Z"}
+{"level":"info","message":"sending get to openid","timestamp":"2018-02-08T21:27:47.097Z"}
+{"level":"info","message":"redirected back from open id","timestamp":"2018-02-08T21:27:47.304Z"}
+{"level":"info","message":"profile: [object Object]","timestamp":"2018-02-08T21:27:47.304Z"}
+{"level":"info","message":"user.handleGoogleAuth","timestamp":"2018-02-08T21:27:47.305Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/me","timestamp":"2018-02-08T21:27:48.322Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-08T21:27:48.323Z"}

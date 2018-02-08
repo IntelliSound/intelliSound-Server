@@ -42,13 +42,17 @@ oauthRouter.get('/oauth/google',(request,response,next) => {
         logger.log('info',`profile: ${response.body}`);
         return User.handleGoogleAuth(response.body);
       })
-      .then(user => user.createToken())
+      .then(user => {
+        console.log(user, 'user');
+        return user.createToken();
+      })
       .then(token => {
+        console.log('token created', token);
         response.cookie('X-intelliSoundAi-Token',token);
         response.redirect(process.env.CLIENT_URL);
       })
       .catch(error => {
-        logger.log('info',{error});
+        logger.log('info',error);
         response.cookie('X-intelliSoundAi-Token','');
         response.redirect(process.env.CLIENT_URL + '?error=oauth');
       });
