@@ -6,7 +6,7 @@ const fsx = require('fs-extra');
 
 describe('Neural Network Test', () => {
   test('should behave by outputting predicted numbers from the wave file series', () => {
-    const inputFilePath1 = `${__dirname}/../assets/complex.wav`;
+    const inputFilePath1 = `${__dirname}/../assets/trumpet.wav`;
     const inputFilePath2 = `${__dirname}/../assets/tri.wav`;
     const outputFilePath = `${__dirname}/temp/transformed.wav`;
     let parsedFile;
