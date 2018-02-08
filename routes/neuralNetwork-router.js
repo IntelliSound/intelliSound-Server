@@ -18,12 +18,14 @@ neuralNetworkRouter.post(`/network/:waveName`, jsonParser, bearerAuthMiddleware,
   //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
   return User.findOne({_id: request.user._id})
     .then(user => {
+
       logger.log(user, `user in the actual router`);
       user.neuralNetworks.push(request.body._id);
     }).save()
     .then(network => response.json(network))
     .catch(next);
 });
+
 
 neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetwork.findById(request.params.networkID)
@@ -32,9 +34,11 @@ neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, r
         throw new httpErrors(404, `__ERROR__ network not found`);
       }
       response.json(network);
+
     })
     .catch(next);
 });
+
 
 neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   let options = {isNew : true};
@@ -46,6 +50,7 @@ neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthM
 
 
   NeuralNetwork.findByIdAndUpdate(request.params.networkID, networkToUpdate, options)
+
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);

@@ -13,6 +13,7 @@ describe(`Neural Network Router`, () => {
   beforeAll(server.start);
   afterAll(server.stop);
   afterEach(neuralNetworkMockFactory.remove);
+  afterEach(userMockFactory.remove);
 
   let sawWaveToTest = 'one_hundred_ms_saw';
   // let sinWaveToTest = 'one_hundred_ms_sin';
@@ -35,6 +36,7 @@ describe(`Neural Network Router`, () => {
   //       });
   //   });
   // });
+
 
   describe(`neural network GET/:id request`, () => {
     test(`neural network GET/:id request should return a 200 status specific network`, () => {
