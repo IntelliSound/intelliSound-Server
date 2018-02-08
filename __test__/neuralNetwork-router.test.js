@@ -15,8 +15,8 @@ describe(`Neural Network Router`, () => {
   afterEach(neuralNetworkMockFactory.remove);
 
   let sawWaveToTest = 'one_hundred_ms_saw';
-  let sinWaveToTest = 'one_hundred_ms_sin';
-  let sqrWaveToTest = 'one_hundred_ms_sqr';
+  // let sinWaveToTest = 'one_hundred_ms_sin';
+  // let sqrWaveToTest = 'one_hundred_ms_sqr';
   // describe(`neural network POST request`, () => {
   //   test(`neural network POST request should return 200 and a network if there are no errors`, () => {
   //     let tempUserMock = {};

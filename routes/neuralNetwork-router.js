@@ -11,10 +11,11 @@ const logger = require('../lib/logger');
 
 const neuralNetworkRouter = module.exports = new Router();
 
-//TODO: nicholas- we wont be posting a network, they should be saved and users update which ones they want references to
 // user must be logged in to perform any actions on a saved network/save a network
-neuralNetworkRouter.post(`/network`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.post(`/network/:waveName`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
+
+  //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
   return User.findOne({_id: request.user._id})
     .then(user => {
       logger.log(user, `user in the actual router`);
@@ -35,9 +36,14 @@ neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, r
     .catch(next);
 });
 
-neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware, (request, response, next) => {
+neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   let options = {isNew : true};
   let networkToUpdate = request.body;
+
+  //Nicholas- set up networktoupdate and get ready to train
+  //Nicholas- train net and return trained network
+  //Nicholas- take trained net and run findByIdAndUpdate on it
+
 
   NeuralNetwork.findByIdAndUpdate(request.params.networkID, networkToUpdate, options)
     .then(network => {
@@ -48,6 +54,7 @@ neuralNetworkRouter.put('/network/:networkID', jsonParser, bearerAuthMiddleware,
     })
     .catch(next);
 });
+
 
 neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetwork.findByIdAndRemove(request.params.networkID)
