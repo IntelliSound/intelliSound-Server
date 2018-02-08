@@ -4,10 +4,12 @@ const {Router} = require('express');
 const httpErrors = require('http-errors');
 const jsonParser = require('body-parser').json();
 const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
-const NeuralNetwork = require('../models/neuralNetwork');
+const NeuralNetworkModel = require('../models/neuralNetwork');
 const User = require('../models/user');
-
+const neuralNetwork = require('../lib/neural-net');
 const logger = require('../lib/logger');
+const waveParser = require('../lib/sound-data-parser');
+const waveWriter = require('../lib/wave-writer');
 
 const neuralNetworkRouter = module.exports = new Router();
 
@@ -15,6 +17,21 @@ const neuralNetworkRouter = module.exports = new Router();
 neuralNetworkRouter.post(`/network/:waveName`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
 
+  // Check where this error is handled or if it needs to be refactored
+  if (!request.params.waveName){
+    throw new httpErrors('__ERROR__', 'User must select a wave to use');
+  }
+
+  const path = `${__dirname}/../assets/${request.params.waveName}.wav`;
+  let neuralGeneratedFile = null;
+
+  return fsx.readFile(path)
+    .then(data => {
+      parsedFile = waveParser(data);
+      parsedFile = neuralNetwork(parsedFile);
+      
+
+        
   //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
   return User.findOne({_id: request.user._id})
     .then(user => {
@@ -28,7 +45,7 @@ neuralNetworkRouter.post(`/network/:waveName`, jsonParser, bearerAuthMiddleware,
 
 
 neuralNetworkRouter.get('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findById(request.params.networkID)
+  NeuralNetworkModel.findById(request.params.networkID)
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
@@ -49,7 +66,7 @@ neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthM
   //Nicholas- take trained net and run findByIdAndUpdate on it
 
 
-  NeuralNetwork.findByIdAndUpdate(request.params.networkID, networkToUpdate, options)
+  NeuralNetworkModel.findByIdAndUpdate(request.params.networkID, networkToUpdate, options)
 
     .then(network => {
       if(!network){
@@ -62,7 +79,7 @@ neuralNetworkRouter.put('/network/:networkID/:waveName', jsonParser, bearerAuthM
 
 
 neuralNetworkRouter.delete('/network/:networkID', bearerAuthMiddleware, (request, response, next) => {
-  NeuralNetwork.findByIdAndRemove(request.params.networkID)
+  NeuralNetworkModel.findByIdAndRemove(request.params.networkID)
     .then(network => {
       if(!network){
         throw new httpErrors(404, `__ERROR__ network not found`);
