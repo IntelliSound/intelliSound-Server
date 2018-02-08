@@ -14,6 +14,9 @@ describe(`Neural Network Router`, () => {
   afterAll(server.stop);
   afterEach(neuralNetworkMockFactory.remove);
 
+  let sawWaveToTest = 'one_hundred_ms_saw';
+  let sinWaveToTest = 'one_hundred_ms_sin';
+  let sqrWaveToTest = 'one_hundred_ms_sqr';
   // describe(`neural network POST request`, () => {
   //   test(`neural network POST request should return 200 and a network if there are no errors`, () => {
   //     let tempUserMock = {};
@@ -53,7 +56,7 @@ describe(`Neural Network Router`, () => {
   });
 
 
-  describe(`neural network PUT request`, () => {
+  describe.only(`neural network PUT/:neuralNetworkID/:waveName request`, () => {
     test(`neural network PUT request should return a 200 status if there are no errors`, () => {
       let tempUserMock = {};
       return userMockFactory.create()
@@ -75,6 +78,28 @@ describe(`Neural Network Router`, () => {
           expect(response.body._id).toBeTruthy();
         });
     });
+
+    // test(`neural network PUT request should return a 200 status if there are no errors`, () => {
+    //   let tempUserMock = {};
+    //   return userMockFactory.create()
+    //     .then(response => {
+    //       tempUserMock.user = response.user;
+    //       tempUserMock.token = response.token;
+    //       return neuralNetworkMockFactory.create()
+    //         .then(response => {
+    //           tempUserMock.user = response.user;
+    //           tempUserMock.networkID = response.networkID;
+    //           return superagent.put(`${API_URL}/network/${tempUserMock.networkID}`)
+    //             .set('Authorization', `Bearer ${tempUserMock.token}`)
+    //             .send({neuralNetwork: placeholderNetwork});
+    //         });
+    //     })
+    //     .then(response => {
+    //       expect(response.status).toEqual(200);
+    //       expect(response.body.neuralNetwork).toBeTruthy();
+    //       expect(response.body._id).toBeTruthy();
+    //     });
+    // });
   });
 
   describe(`neural network DELETE request`, () => {

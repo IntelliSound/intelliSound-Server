@@ -13,3 +13,5 @@
 {"level":"info","message":"There's a DELETE on /network/5a7ba0022c87c862d3e791a4","timestamp":"2018-02-08T00:55:30.196Z"}
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T00:57:55.725Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-08T00:57:55.802Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T01:04:49.756Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-08T01:04:49.833Z"}
