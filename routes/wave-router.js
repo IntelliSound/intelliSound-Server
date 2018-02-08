@@ -11,7 +11,7 @@ const WaveRouter = module.exports = new Router();
 
 // user does NOT have to be logged in to upload a wave file and run it through the neural network
 // upload adds a 'body' and 'file/files' object to the request
-WaveRouter.post('/wave', upload.any(), (request, response, next) => {
+WaveRouter.post('/wave/:neuralNetworkID?', upload.any(), (request, response, next) => {
   if(request.files.length > 1){
     return next(new httpErrors(400, `__ERROR__ only one file can be uploaded at a time`));
   }
