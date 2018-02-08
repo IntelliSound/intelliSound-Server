@@ -149,4 +149,11 @@
 {"level":"info","message":"There's a POST on /network","timestamp":"2018-02-06T23:30:25.430Z"}
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-06T23:30:28.443Z"}
 {"level":"info","message":"responding with a 409 status","timestamp":"2018-02-06T23:30:28.477Z"}
-{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:30:28.508Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-06T23:30:28.508Z"}{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T02:52:26.864Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T02:56:08.687Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T02:57:44.447Z"}
+{"level":"info","message":"There's a GET on /network","timestamp":"2018-02-08T02:58:52.314Z"}
+{"level":"info","message":"There's a PUT on /network/5a7bbcec88708c716e27b621","timestamp":"2018-02-08T02:58:52.424Z"}
+{"level":"info","message":"There's a DELETE on /network/5a7bbcec88708c716e27b624","timestamp":"2018-02-08T02:58:52.534Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T02:58:53.368Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-08T02:58:53.472Z"}
