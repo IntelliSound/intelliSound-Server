@@ -1,6 +1,7 @@
 'use strict';
 
 require('synaptic');
+const faker = require('faker');
 const neuralNetwork = require('../../../models/neuralNetwork');
 const testNetwork = require('../testNetwork');
 const placeholderNetwork = JSON.stringify(testNetwork);
@@ -17,6 +18,7 @@ neuralNetworkMockFactory.create = () => {
       mock.netArray = response.user.neuralNetworks;
       return new neuralNetwork({
         neuralNetwork: placeholderNetwork,
+        name: faker.hacker.noun(),
       }).save()
         .then(network => {
           mock.netArray.push(network._id);

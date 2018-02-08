@@ -29,3 +29,7 @@
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-08T21:28:00.035Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-08T21:28:00.161Z"}
 {"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T21:29:24.118Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T21:45:19.451Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T21:48:03.186Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-08T21:50:23.046Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cc62e60dfff9d2e3d4929","timestamp":"2018-02-08T21:50:38.351Z"}
