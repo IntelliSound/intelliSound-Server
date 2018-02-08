@@ -5,7 +5,7 @@ const soundDataParser = require('../lib/sound-data-parser');
 
 describe('sound-data-parser', () => {
   test('should return constructedWaveFile which contains buffer and other data attached', () => {
-    const inputFilePath = `${__dirname}/../assets/one_hundred_ms_sin.wav`;
+    const inputFilePath = `${__dirname}/../assets/tri.wav`;
 
     return fsx.readFile(inputFilePath)
       .then(data => {
@@ -14,7 +14,7 @@ describe('sound-data-parser', () => {
         expect(parsedFile.numberOfChannels).toEqual(1);
         expect(parsedFile.sampleRate).toEqual(44100);
         expect(parsedFile.bitsPerSample).toEqual(16);
-        expect(parsedFile.subChunk2Size).toEqual(11126);
+        expect(parsedFile.subChunk2Size).toEqual(88200);
         expect(parsedFile.data).toBeTruthy();
       });
 

@@ -7,7 +7,7 @@ const waveWriter = require('../lib/wave-writer');
 describe('wave-writer', () => {
 
   test('should create new wave file based off data', () => {
-    const inputFilePath = `${__dirname}/../assets/one_hundred_ms_sin.wav`;
+    const inputFilePath = `${__dirname}/../assets/tri.wav`;
 
     return fsx.readFile(inputFilePath)
       .then(data => {
