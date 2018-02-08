@@ -5,6 +5,8 @@ const jsonParser = require('body-parser').json();
 const httpErrors = require('http-errors');
 const User = require('../models/user');
 const basicAuthMiddleware = require('../lib/middleware/basic-auth-middleware');
+const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
+
 
 const userRouter = module.exports = new Router();
 
@@ -28,5 +30,13 @@ userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
   }
   return request.user.createToken()
     .then(token => response.json({token}))
+    .catch(next);
+});
+
+userRouter.get(`/user/me`, bearerAuthMiddleware, (request, response, next) => {
+  return User.findOne({_id: request.user._id})
+    .then(user => {
+      return response.json(user);
+    })
     .catch(next);
 });
