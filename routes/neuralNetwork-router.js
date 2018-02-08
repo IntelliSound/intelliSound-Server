@@ -8,7 +8,7 @@ const bearerAuthMiddleware = require('../lib/middleware/bearer-middleware');
 const NeuralNetworkModel = require('../models/neuralNetwork');
 const User = require('../models/user');
 const neuralNetwork = require('../lib/neural-net');
-const logger = require('../lib/logger');
+// const logger = require('../lib/logger');
 const waveParser = require('../lib/sound-data-parser');
 const waveWriter = require('../lib/wave-writer');
 
@@ -38,9 +38,10 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, jsonParser, 
       let parsedFile = waveParser(data);
       parsedFile = neuralNetwork(parsedFile);
       neuralGeneratedFile = waveWriter(parsedFile);
+      const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
 
       return new NeuralNetworkModel({
-        neuralNetwork: parsedFile.neuralNet,
+        neuralNetwork: neuralNetworkToSave,
         name: request.params.neuralnetname,
       }).save()
         .then(network => {
