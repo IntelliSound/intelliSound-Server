@@ -48,7 +48,6 @@ userSchema.methods.createToken = function(){
   this.tokenSeed = crypto.randomBytes(64).toString('hex');
   return this.save()
     .then(user => {
-      console.log('createtoken user: ', user);
       return jsonWebToken.sign({
         tokenSeed: user.tokenSeed,
       }, process.env.SECRET_SALT);
