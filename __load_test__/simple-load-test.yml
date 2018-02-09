@@ -1,15 +1,15 @@
 config:
-  target: ' https://intellisound-server.herokuapp.com/'
-  http:
-    tls:
-      rejectUnauthorized: false
+  target: 'https://intellisound-server.herokuapp.com'
+  # http:
+  #   tls:
+  #     rejectUnauthorized: false
   phases:
     - duration: 5
       arrivalRate: 20
-    - duration: 10
-      arrivalRate: 50
-    - duration: 5
-      arrivalRate: 400
+    # - duration: 10
+    #   arrivalRate: 50
+    # - duration: 5
+    #   arrivalRate: 400
   processor: './load-test-create-user.js'
 scenarios:
   - name: "Create Users"
