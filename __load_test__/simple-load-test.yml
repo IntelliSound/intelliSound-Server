@@ -2,9 +2,11 @@ config:
   target: 'http://localhost:3000'
   phases:
     - duration: 5
-      arrivalRate: 5
-    - duration: 10 # five seconds
-      arrivalRate: 20 # 20 fake users per second
+      arrivalRate: 20
+    - duration: 10
+      arrivalRate: 50
+    - duration: 5
+      arrivalRate: 400
   processor: './load-test-create-user.js'
 scenarios:
   - name: "Create Users"
@@ -20,3 +22,8 @@ scenarios:
           json: "$.token"
           as: "token"
     - log: "Sent a request to signup/"
+    - get:
+        url: "/user/me"
+        headers:
+          Authorization: "Bearer {{ token }}"
+    - log: "sent a request to /user/me"
