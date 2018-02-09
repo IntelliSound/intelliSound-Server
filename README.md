@@ -7,11 +7,15 @@
 
 ## Overview
 
-The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron model, which is a feed forward neural network. 
+The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron algorithm, which is a feed forward neural network. A neural network is trained on a simple audio waveform, and the neural network will learn to predict this pattern. When activated, it will take a random noise seed, and attempt to build its own version of the audio waveform it has been trained on, based on that seed input.
 
 ## Getting Started
 
+A basic understanding of npm, git, aws S3, and ES6 is assumed. To build your own server, first fork/clone this repo and do an `npm i`. Set up an aws bucket, and create the relevant env variables in a .env file. In the .env, setup the PORT, MONGODB_URI, and SECRET_SALT variables with the values relevant to your deployment. The SECRET_SALT should be a long string of randomly generated characters, as this is used to sign the token seed during encryption. Also set in the .env file your relevant aws S3 keys, your AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_BUCKET.
+
 ## Models
+
+## Routes
 
 ## Technologies Used
 ### Production
