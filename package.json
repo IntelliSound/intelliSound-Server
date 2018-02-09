@@ -25,6 +25,7 @@
   "homepage": "https://github.com/IntelliSound/intelliSound-Server#readme",
   "devDependencies": {
     "aws-sdk-mock": "^1.7.0",
+    "artillery": "^1.6.0-12",
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest": "^22.1.4",

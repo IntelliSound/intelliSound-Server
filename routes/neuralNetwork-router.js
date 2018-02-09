@@ -118,7 +118,6 @@ neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (requ
         throw new httpErrors(404, `__ERROR__ network not found`);
       }
       response.json(network);
-
     })
     .catch(next);
 });
