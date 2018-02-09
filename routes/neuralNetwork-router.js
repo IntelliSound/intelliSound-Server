@@ -46,7 +46,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
   }
 
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
-  const TEMP_FILE_PATH = `${__dirname}/../temp/`;
+  const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
   const key = uuid.v1();
   let neuralGeneratedFile = null;
   let newNeuralNetwork = null;
@@ -88,15 +88,25 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
     throw new httpErrors('__ERROR__', 'User must select a wave to use');
   }
 
-  const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
+  const key = uuid.v1();
+  let neuralNetworkToSave = null;
 
-  return fsx.readFile(path)
+  return fsx.readFile(PATH)
     .then(data => {
       let parsedFile = waveParser(data);
       parsedFile = neuralNetwork(parsedFile);
       const neuralGeneratedFile = waveWriter(parsedFile);
-      const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
-      return response.json({neuralNetworkToSave, neuralGeneratedFile});
+      neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
+      return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);
+    })
+    .then(() => {
+      return S3.upload(TEMP_FILE_PATH, key);
+    })
+    .then(url => {
+      const awsURL = url;
+      return response.json({neuralNetworkToSave, awsURL});
     })
     .catch(next);
 });
