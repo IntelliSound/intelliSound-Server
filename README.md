@@ -7,6 +7,8 @@
 
 ## Overview
 
+The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron model, which is a feed forward neural network. 
+
 ## Getting Started
 
 ## Models
