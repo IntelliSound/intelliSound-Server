@@ -4,3 +4,104 @@
 {"level":"info","message":"There's a DELETE on /neuralnetwork/5a7ce7baaae6e1b6bbcb86e2","timestamp":"2018-02-09T00:13:46.100Z"}
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T00:14:07.032Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T00:14:07.147Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T07:21:26.318Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T08:47:11.342Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T08:49:26.844Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T08:55:41.751Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T08:56:13.895Z"}
+{"level":"info","message":"responding with a 500 status: general error because EISDIR: illegal operation on a directory, open '/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/routes/../temp/'","timestamp":"2018-02-09T08:56:18.272Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T08:57:59.330Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T08:58:41.122Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T14:49:54.758Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T14:49:54.769Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7db512d37244d8bc3435f9","timestamp":"2018-02-09T14:49:54.882Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T14:49:54.884Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7db512d37244d8bc3435fc/tri","timestamp":"2018-02-09T14:49:54.955Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T14:49:54.988Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7db513d37244d8bc3435ff","timestamp":"2018-02-09T14:49:55.064Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T14:49:55.065Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T14:50:19.436Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T14:50:19.552Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T15:04:29.143Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T15:04:29.147Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7db87d759f4adb435388c5","timestamp":"2018-02-09T15:04:29.246Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T15:04:29.247Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7db87d759f4adb435388c8/tri","timestamp":"2018-02-09T15:04:29.322Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T15:04:29.324Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7db87d759f4adb435388cb","timestamp":"2018-02-09T15:04:29.395Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T15:04:29.397Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:04:35.233Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:04:35.320Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T15:08:13.966Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7db96cd54d51dbd852cee2","timestamp":"2018-02-09T15:08:28.427Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7db96cd54d51dbd852cee5/tri","timestamp":"2018-02-09T15:08:28.501Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7db978d54d51dbd852cee8","timestamp":"2018-02-09T15:08:40.404Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:08:41.259Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:08:41.357Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T15:25:09.737Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dbd665196ffe06157ff2d","timestamp":"2018-02-09T15:25:26.908Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dbd665196ffe06157ff30/tri","timestamp":"2018-02-09T15:25:26.995Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dbd745196ffe06157ff33","timestamp":"2018-02-09T15:25:40.220Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:26:01.117Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:26:01.209Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T15:40:53.971Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dc113ac9165e1e8ef8391","timestamp":"2018-02-09T15:41:07.976Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dc114ac9165e1e8ef8394/tri","timestamp":"2018-02-09T15:41:08.055Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dc11fac9165e1e8ef8397","timestamp":"2018-02-09T15:41:19.954Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:41:38.026Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:41:38.135Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T16:41:51.381Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dcf5f296bb2e29daab645","timestamp":"2018-02-09T16:42:07.502Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dcf5f296bb2e29daab648/tri","timestamp":"2018-02-09T16:42:07.586Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dcf6e296bb2e29daab64b","timestamp":"2018-02-09T16:42:22.401Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T16:42:44.758Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T16:42:44.861Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T16:44:50.175Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dd01342c97ce32057315a","timestamp":"2018-02-09T16:45:07.907Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dd01342c97ce32057315d/tri","timestamp":"2018-02-09T16:45:07.995Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dd02342c97ce320573160","timestamp":"2018-02-09T16:45:23.702Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T16:45:48.081Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T16:45:48.177Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T16:58:17.152Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T16:58:30.607Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/saw","timestamp":"2018-02-09T16:58:54.776Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/trumpet","timestamp":"2018-02-09T16:59:46.210Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T17:11:42.612Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dd65c61d8a7e697b21590","timestamp":"2018-02-09T17:11:56.016Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dd65c61d8a7e697b21593/tri","timestamp":"2018-02-09T17:11:56.093Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dd66761d8a7e697b21596","timestamp":"2018-02-09T17:12:07.859Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T17:12:26.040Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T17:12:26.124Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T17:17:04.368Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dd79ff54bf6e89278ac91","timestamp":"2018-02-09T17:17:19.742Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dd79ff54bf6e89278ac94/tri","timestamp":"2018-02-09T17:17:19.822Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dd7abf54bf6e89278ac97","timestamp":"2018-02-09T17:17:31.830Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T17:17:51.518Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T17:17:51.612Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:25:27.599Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/trumpet","timestamp":"2018-02-09T17:27:55.367Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:28:00.520Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:28:51.030Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/saw","timestamp":"2018-02-09T17:29:23.965Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:32:26.668Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T17:32:47.161Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/trumpet","timestamp":"2018-02-09T17:33:02.951Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:33:15.926Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T17:33:33.980Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:34:24.438Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:35:48.480Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T17:36:23.732Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T17:38:31.381Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:40:14.882Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/trumpet","timestamp":"2018-02-09T17:43:45.357Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:48:35.871Z"}
+{"level":"info","message":"responding with a 500 status: general error because network.activate is not a function","timestamp":"2018-02-09T17:48:35.896Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:50:59.759Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-09T17:51:13.641Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-09T17:51:32.393Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T17:52:22.881Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7ddfe7608485ed2e8ae688","timestamp":"2018-02-09T17:52:39.225Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7ddfe7608485ed2e8ae68b/tri","timestamp":"2018-02-09T17:52:39.308Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7ddff4608485ed2e8ae68e","timestamp":"2018-02-09T17:52:52.656Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T17:53:14.011Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T17:53:14.117Z"}
