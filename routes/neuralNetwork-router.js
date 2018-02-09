@@ -168,10 +168,7 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
 
 neuralNetworkRouter.delete('/neuralnetwork/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetworkModel.findByIdAndRemove(request.params.networkID)
-    .then(network => {
-      if(!network){
-        throw new httpErrors(404, `__ERROR__ network not found`);
-      }
+    .then(() => {
       response.sendStatus(204);
     })
     .catch(next);

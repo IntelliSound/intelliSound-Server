@@ -27,16 +27,16 @@ describe(`User router`, () => {
         });
     });
 
-    // test(`user POST request to /signup should return a 400 if there is not a full user posted`, () => {
-    //   return superagent.post(`${API_URL}/signup`)
-    //     .send({
-    //       username: faker.internet.userName(),
-    //       email: faker.internet.email(),
-    //     })
-    //     .catch(response => {
-    //       expect(response.status).toBe(400);
-    //     });
-    // }); //TODO: nicholas delete me if not fixed
+    test(`user POST request to /signup should return a 400 if there is not a full user posted`, () => {
+      return Promise.resolve(superagent.post(`${API_URL}/signup`)
+        .send({
+          username: faker.internet.userName(),
+          email: faker.internet.email(),
+        }))
+        .catch(response => {
+          expect(response.status).toBe(400);
+        });
+    });
   });
 
   describe(`testing user GET routes`, () => {
@@ -51,17 +51,17 @@ describe(`User router`, () => {
           expect(response.body.token).toBeTruthy();
         });
     });
-    //
-    // test(`user GET request to /login should return a 404 if there is invalid user`, () => {
-    //   return userMockFactory.create()
-    //     .then(mock => {
-    //       return superagent.get(`${API_URL}/login`)
-    //         .auth('bad username', mock.request.password);
-    //     })
-    //     .catch(response => {
-    //       expect(response.status).toEqual(404);
-    //     });
-    // }); //TODO: nicholas delete me if not fixed
+
+    test(`user GET request to /login should return a 404 if there is invalid user`, () => {
+      return Promise.resolve(userMockFactory.create()
+        .then(mock => {
+          return superagent.get(`${API_URL}/login`)
+            .auth('bad username', mock.request.password);
+        })) 
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
+    }); //TODO: nicholas delete me if not fixed
 
     test(`user GET request to /user/me should return a user object on success`, () => {
       let tempUserMock;

@@ -21,7 +21,6 @@ describe(`User router`, () => {
           expect(response.status).toBe(200);
         })
         .catch(response => {
-          console.log(response);
           expect(response.status).toBe(404);
         });
     });
