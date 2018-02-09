@@ -94,7 +94,6 @@ User.handleGoogleAuth = googlePlusProfile => { //nicholas TODO: refactor user to
       }).save();
     })
     .catch(error => {
-      console.log(error);
       logger.log('info', error);
       next();
     });
