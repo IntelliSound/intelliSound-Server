@@ -4,3 +4,63 @@
 {"level":"info","message":"There's a DELETE on /neuralnetwork/5a7ce7baaae6e1b6bbcb86e2","timestamp":"2018-02-09T00:13:46.100Z"}
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T00:14:07.032Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T00:14:07.147Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T01:01:27.036Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T01:01:27.041Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cf2e7a398541f6f4bb5d0","timestamp":"2018-02-09T01:01:27.098Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T01:01:27.099Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cf2e7a398541f6f4bb5d3/tri","timestamp":"2018-02-09T01:01:27.145Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T01:01:27.153Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7cf2e7a398541f6f4bb5d6","timestamp":"2018-02-09T01:01:27.197Z"}
+{"level":"info","message":"responding with a 500 status: general error because invalid signature","timestamp":"2018-02-09T01:01:27.197Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:01:32.589Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:01:32.684Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T01:02:04.809Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7cf314b6ce7a20c23e06b8","timestamp":"2018-02-09T01:02:12.574Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7cf314b6ce7a20c23e06bb/tri","timestamp":"2018-02-09T01:02:12.619Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7cf31bb6ce7a20c23e06be","timestamp":"2018-02-09T01:02:19.246Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:02:19.597Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:02:19.650Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:12:37.807Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:12:37.887Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:12:37.926Z"}
+{"level":"info","message":"responding with a 400","timestamp":"2018-02-09T01:12:37.927Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:12:52.365Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:12:52.451Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:12:52.494Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:15:57.316Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:15:57.394Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:15:57.433Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:16:26.225Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:16:26.303Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:16:26.342Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:16:35.947Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:16:36.026Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:16:36.066Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:18:10.835Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:18:10.913Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:18:10.952Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:18:36.965Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:18:37.043Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:18:37.082Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:19:03.031Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:19:03.113Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:19:03.154Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:19:39.064Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:19:39.143Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:19:39.182Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:20:10.246Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:20:10.327Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:20:10.371Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:21:45.265Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:21:45.349Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:21:45.390Z"}
+{"level":"info","message":"responding with a 401 status","timestamp":"2018-02-09T01:21:45.392Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:22:27.282Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:22:27.360Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:22:27.399Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:22:41.750Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:22:41.828Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:22:41.867Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:23:11.982Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:23:12.061Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:23:12.100Z"}

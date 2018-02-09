@@ -40,5 +40,22 @@ describe(`User router`, () => {
           expect(response.body.token).toBeTruthy();
         });
     });
+    test(`user GET request to /user/me should return a user object on success`, () => {
+      let tempUserMock;
+      return userMockFactory.create()
+        .then(mock => {
+          tempUserMock = mock.user;
+          return superagent.get(`${API_URL}/user/me`)
+            .set('Authorization', `Bearer ${mock.token}`);
+        })
+        .then(response => {
+          expect(response.status).toEqual(200);
+          console.log(response.body._id);
+          console.log(tempUserMock);
+          expect(response.body.username).toBe(tempUserMock.username);
+          expect(response.body.email).toBe(tempUserMock.email);
+          expect(response.body._id).toBe(tempUserMock._id.toString());
+        });
+    });
   });
 });
