@@ -12,6 +12,8 @@ const neuralNetwork = require('../lib/neural-net');
 // const logger = require('../lib/logger');
 const waveParser = require('../lib/sound-data-parser');
 const waveWriter = require('../lib/wave-writer');
+const S3 = require('../lib/middleware/s3');
+const uuid = require('uuid');
 
 const neuralNetworkRouter = module.exports = new Router();
 
@@ -43,30 +45,41 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
     throw new httpErrors('__ERROR__', 'Network must have a name');
   }
 
-  const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  const TEMP_FILE_PATH = `${__dirname}/../temp/`;
+  const key = uuid.v1();
   let neuralGeneratedFile = null;
   let newNeuralNetwork = null;
+  let awsURL = null;
+  let neuralNetworkToSave = null;
   
   //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
-  return fsx.readFile(path)
+  return fsx.readFile(PATH)
     .then(data => {
       let parsedFile = waveParser(data);
       parsedFile = neuralNetwork(parsedFile);
       neuralGeneratedFile = waveWriter(parsedFile);
-      const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
-
+      neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
+      return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);
+    })
+    .then(() => {
+      return S3.upload(TEMP_FILE_PATH, key);
+    })
+    .then(url => {
+      awsURL = url;
       return new NeuralNetworkModel({
         neuralNetwork: neuralNetworkToSave,
         name: request.params.neuralnetname,
-      }).save()
-        .then(network => {
-          newNeuralNetwork = network;
-          request.user.neuralNetworks.push(newNeuralNetwork._id);
-          return User.findByIdAndUpdate(request.user._id, request.user)
-            .then(() => response.json({newNeuralNetwork, neuralGeneratedFile}))
-            .catch(next);
-        });
-    });
+      }).save();
+    })
+    .then(network => {
+      newNeuralNetwork = network;
+      request.user.neuralNetworks.push(newNeuralNetwork._id);
+      return User.findByIdAndUpdate(request.user._id, request.user)
+        .then(() => response.json({newNeuralNetwork, awsURL}));
+    })
+    .catch(next);
+    
 });
 
 neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, next) => {
