@@ -15,9 +15,28 @@ A basic understanding of npm, git, aws S3, and ES6 is assumed. To build your own
 
 ## Models
 
+To be completed.
+
+### User
+
+### NeuralNetwork
+
 ## Routes
 
+To be completed.
+
+### User
+
+### NeuralNetwork
+
+### OAuth
+
+## Code Examples
+
+To be completed.
+
 ## Technologies Used
+
 ### Production
 * Synaptic JS
 * ES6
