@@ -1,0 +1,29 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 5
+      arrivalRate: 1
+    - duration: 10
+      arrivalRate: 2
+  processor: './load-test-create-user.js'
+scenarios:
+  - name: "Create Users"
+    flow:
+    - function: 'create'
+    - post:
+        url: "/signup"
+        json:
+          username: "{{ username }}"
+          email: "{{ email }}"
+          password: "{{ password }}"
+        capture:
+          json: "$.token"
+          as: "token"
+    - log: "Sent a request to signup/"
+    - post:
+        url: "/neuralnetwork/tri/loadtestname"
+        headers:
+          Authorization: "Bearer {{ token }}"
+          json:
+            bio: "none"
+    - log: "sent a request to neuralnet/"

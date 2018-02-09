@@ -46,7 +46,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
   const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
   let neuralGeneratedFile = null;
   let newNeuralNetwork = null;
-  
+
   //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
   return fsx.readFile(path)
     .then(data => {
@@ -95,7 +95,6 @@ neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (requ
         throw new httpErrors(404, `__ERROR__ network not found`);
       }
       response.json(network);
-
     })
     .catch(next);
 });

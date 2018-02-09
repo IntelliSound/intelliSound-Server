@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/IntelliSound/intelliSound-Server#readme",
   "devDependencies": {
+    "artillery": "^1.6.0-12",
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest": "^22.1.4",
