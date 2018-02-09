@@ -24,7 +24,6 @@ describe(`Neural Network Router`, () => {
         .then(response => {
           tempUserMock.user = response.user;
           tempUserMock.token = response.token;
-          // console.log(tempUserMock);
           return superagent.post(`${API_URL}/neuralnetwork/${triWaveToTest}/testname`)
             .set('Authorization', `Bearer ${tempUserMock.token}`);
         })
@@ -75,53 +74,31 @@ describe(`Neural Network Router`, () => {
         })
         .then(response => {
           expect(response.status).toEqual(200);
-          expect(response.body.neuralNetwork).toBeTruthy();
-          expect(response.body._id).toBeTruthy();
+          expect(response.body.newNeuralNetwork).toBeTruthy();
+          expect(response.body.neuralGeneratedFile).toBeTruthy();
+        });
+    }, 100000);
+  });
+
+
+  describe(`neural network DELETE request`, () => {
+    test(`neural network DELETE request should return a 204 status if there are no errors`, () => {
+      let tempUserMock = {};
+      return userMockFactory.create()
+        .then(response => {
+          tempUserMock.user = response.user;
+          tempUserMock.token = response.token;
+          return neuralNetworkMockFactory.create()
+            .then(response => {
+              tempUserMock.user = response.user;
+              tempUserMock.networkID = response.networkID;
+              return superagent.delete(`${API_URL}/neuralnetwork/${tempUserMock.networkID}`)
+                .set('Authorization', `Bearer ${tempUserMock.token}`);
+            });
+        })
+        .then(response => {
+          expect(response.status).toEqual(204);
         });
     });
   });
-
-  // test(`neural network PUT request should return a 200 status if there are no errors`, () => {
-  //   let tempUserMock = {};
-  //   return userMockFactory.create()
-  //     .then(response => {
-  //       tempUserMock.user = response.user;
-  //       tempUserMock.token = response.token;
-  //       return neuralNetworkMockFactory.create()
-  //         .then(response => {
-  //           tempUserMock.user = response.user;
-  //           tempUserMock.networkID = response.networkID;
-  //           return superagent.put(`${API_URL}/neuralnetwork/${tempUserMock.networkID}`)
-  //             .set('Authorization', `Bearer ${tempUserMock.token}`)
-  //             .send({neuralNetwork: placeholderNetwork});
-  //         });
-  //     })
-  //     .then(response => {
-  //       expect(response.status).toEqual(200);
-  //       expect(response.body.neuralNetwork).toBeTruthy();
-  //       expect(response.body._id).toBeTruthy();
-  //     });
-  // });
-  // });
-
-//   describe(`neural network DELETE request`, () => {
-//     test(`neural network DELETE request should return a 204 status if there are no errors`, () => {
-//       let tempUserMock = {};
-//       return userMockFactory.create()
-//         .then(response => {
-//           tempUserMock.user = response.user;
-//           tempUserMock.token = response.token;
-//           return neuralNetworkMockFactory.create()
-//             .then(response => {
-//               tempUserMock.user = response.user;
-//               tempUserMock.networkID = response.networkID;
-//               return superagent.delete(`${API_URL}/neuralnetwork/${tempUserMock.networkID}`)
-//                 .set('Authorization', `Bearer ${tempUserMock.token}`);
-//             });
-//         })
-//         .then(response => {
-//           expect(response.status).toEqual(204);
-//         });
-//     });
-//   });
 });
