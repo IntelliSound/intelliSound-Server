@@ -30,7 +30,7 @@ describe(`Neural Network Router`, () => {
         .then(response => {
           expect(response.status).toEqual(200);
           expect(response.body.newNeuralNetwork).toBeTruthy();
-          expect(response.body.neuralGeneratedFile).toBeTruthy();
+          expect(response.body.awsURL).toBeTruthy();
         });
     }, 100000);
   });
@@ -75,7 +75,7 @@ describe(`Neural Network Router`, () => {
         .then(response => {
           expect(response.status).toEqual(200);
           expect(response.body.newNeuralNetwork).toBeTruthy();
-          expect(response.body.neuralGeneratedFile).toBeTruthy();
+          expect(response.body.awsURL).toBeTruthy();
         });
     }, 100000);
   });
