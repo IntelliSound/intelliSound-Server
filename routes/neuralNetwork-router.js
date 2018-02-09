@@ -123,14 +123,16 @@ neuralNetworkRouter.get('/neuralnetwork/:networkID', bearerAuthMiddleware, (requ
     .catch(next);
 });
 
-
 neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, bearerAuthMiddleware, (request, response, next) => {
   let options = {isNew : true};
-  const path = `${__dirname}/../assets/${request.params.wavename}.wav`;
   let neuralGeneratedFile = null;
   let foundNeuralNetwork = null;
   let newNeuralNetwork = null;
-
+  const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
+  const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
+  const key = uuid.v1();
+  let awsURL = null;
+  let neuralNetworkToSave = null;
   //Nicholas- set up networktoupdate and get ready to train
   //Nicholas- train net and return trained network
   //Nicholas- take trained net and run findByIdAndUpdate on it
@@ -138,22 +140,30 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
   return NeuralNetworkModel.findById(request.params.networkID)
     .then(foundNet => {
       foundNeuralNetwork = Network.fromJSON(JSON.parse(foundNet.neuralNetwork));
-      return fsx.readFile(path)
-        .then(data => {
-          let parsedFile = waveParser(data);
-          parsedFile = neuralNetwork(parsedFile, foundNeuralNetwork);
-          neuralGeneratedFile = waveWriter(parsedFile);
-          const neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
-          return NeuralNetworkModel.findByIdAndUpdate(request.params.networkID, neuralNetworkToSave, options);
-        })
-        .then(network => {
-          newNeuralNetwork = network;
-          request.user.neuralNetworks.push(newNeuralNetwork._id);
-          return User.findByIdAndUpdate(request.user._id, request.user);
-        })
-        .then(() => response.json({newNeuralNetwork, neuralGeneratedFile}))
-        .catch(next);
-    });
+      return fsx.readFile(PATH);
+    })
+    .then(data => {
+      let parsedFile = waveParser(data);
+      parsedFile = neuralNetwork(parsedFile, foundNeuralNetwork);
+      neuralGeneratedFile = waveWriter(parsedFile);
+      neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
+      
+      return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);
+    })
+    .then(() => {
+      return S3.upload(TEMP_FILE_PATH, key);
+    })
+    .then(url => {
+      awsURL = url;
+      return NeuralNetworkModel.findByIdAndUpdate(request.params.networkID, neuralNetworkToSave, options);
+    })
+    .then(network => {
+      newNeuralNetwork = network;
+      request.user.neuralNetworks.push(newNeuralNetwork._id);
+      return User.findByIdAndUpdate(request.user._id, request.user);
+    })
+    .then(() => response.json({newNeuralNetwork, awsURL}))
+    .catch(next);
 });
 
 
