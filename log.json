@@ -38,3 +38,9 @@
 {"level":"info","message":"There's a DELETE on /neuralnetwork/5a7db978d54d51dbd852cee8","timestamp":"2018-02-09T15:08:40.404Z"}
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:08:41.259Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:08:41.357Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T15:25:09.737Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7dbd665196ffe06157ff2d","timestamp":"2018-02-09T15:25:26.908Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7dbd665196ffe06157ff30/tri","timestamp":"2018-02-09T15:25:26.995Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7dbd745196ffe06157ff33","timestamp":"2018-02-09T15:25:40.220Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T15:26:01.117Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T15:26:01.209Z"}
