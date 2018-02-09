@@ -25,9 +25,6 @@ userRouter.post(`/signup`, jsonParser, (request, response, next) => {
 });
 
 userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
-  if(!request.user){
-    return next(new httpErrors(404, `__ERROR__ Not Found`));
-  }
   return request.user.createToken()
     .then(token => response.json({token}))
     .catch(next);

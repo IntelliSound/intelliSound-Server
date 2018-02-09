@@ -52,7 +52,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
   let newNeuralNetwork = null;
   let awsURL = null;
   let neuralNetworkToSave = null;
-  
+
   //Nicholas- put the wav file through a new neural net. then add its id to the user object and update user
   return fsx.readFile(PATH)
     .then(data => {
@@ -79,7 +79,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
         .then(() => response.json({newNeuralNetwork, awsURL}));
     })
     .catch(next);
-    
+
 });
 
 neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, next) => {
@@ -146,7 +146,7 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
       parsedFile = neuralNetwork(parsedFile, foundNeuralNetwork);
       neuralGeneratedFile = waveWriter(parsedFile);
       neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
-      
+
       return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);
     })
     .then(() => {
@@ -168,10 +168,7 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
 
 neuralNetworkRouter.delete('/neuralnetwork/:networkID', bearerAuthMiddleware, (request, response, next) => {
   NeuralNetworkModel.findByIdAndRemove(request.params.networkID)
-    .then(network => {
-      if(!network){
-        throw new httpErrors(404, `__ERROR__ network not found`);
-      }
+    .then(() => {
       response.sendStatus(204);
     })
     .catch(next);

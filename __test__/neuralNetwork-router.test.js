@@ -100,5 +100,23 @@ describe(`Neural Network Router`, () => {
           expect(response.status).toEqual(204);
         });
     });
+    test(`neural network DELETE request should return a 404 status if it can't find the network`, () => {
+      let tempUserMock = {};
+      return userMockFactory.create()
+        .then(response => {
+          tempUserMock.user = response.user;
+          tempUserMock.token = response.token;
+          return neuralNetworkMockFactory.create()
+            .then(response => {
+              tempUserMock.user = response.user;
+              tempUserMock.networkID = response.networkID;
+              return superagent.delete(`${API_URL}/neuralnetwork/badid`)
+                .set('Authorization', `Bearer ${tempUserMock.token}`);
+            });
+        })
+        .catch(response => {
+          expect(response.status).toEqual(404);
+        });
+    });
   });
 });
