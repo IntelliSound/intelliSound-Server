@@ -1,0 +1,6 @@
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-09T00:13:20.425Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7ce7aeaae6e1b6bbcb86dc","timestamp":"2018-02-09T00:13:34.242Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7ce7aeaae6e1b6bbcb86df/tri","timestamp":"2018-02-09T00:13:34.324Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7ce7baaae6e1b6bbcb86e2","timestamp":"2018-02-09T00:13:46.100Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T00:14:07.032Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T00:14:07.147Z"}
