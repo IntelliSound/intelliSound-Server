@@ -1,5 +1,8 @@
 config:
-  target: 'http://localhost:3000'
+  target: ' https://intellisound-server.herokuapp.com/'
+  http:
+    tls:
+      rejectUnauthorized: false
   phases:
     - duration: 5
       arrivalRate: 20
