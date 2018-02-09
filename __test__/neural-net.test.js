@@ -1,3 +1,6 @@
+'use strict';
+
+const {Network} = require('synaptic');
 const waveParser = require('../lib/sound-data-parser');
 const waveWriter = require('../lib/wave-writer');
 const neuralNetwork = require('../lib/neural-net');
@@ -19,7 +22,7 @@ describe('Neural Network Test', () => {
         return fsx.readFile(inputFilePath2)
           .then(data => {
             let triWave = waveParser(data);
-            triWave = neuralNetwork(triWave, parsedFile.neuralNet);
+            triWave = neuralNetwork(triWave, Network.fromJSON(parsedFile.neuralNet));
             fsx.writeFile(outputFilePath, waveWriter(triWave));
             expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
             expect(triWave.neuralTransformedArray.length).toBeTruthy();
