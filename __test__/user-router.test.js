@@ -44,7 +44,7 @@ describe(`User router`, () => {
       return userMockFactory.create()
         .then(mock => {
           return superagent.get(`${API_URL}/login`)
-            .auth(mock.request.username);
+            .auth('bad username', mock.request.password);
         })
         .then(response => {
           expect(response.status).toEqual(404);

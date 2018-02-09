@@ -64,3 +64,13 @@
 {"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:23:11.982Z"}
 {"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:23:12.061Z"}
 {"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:23:12.100Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:26:31.904Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:26:31.983Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:26:32.024Z"}
+{"level":"info","message":"responding with a 401","timestamp":"2018-02-09T01:26:32.043Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:26:32.065Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-09T01:29:35.156Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:29:35.237Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-09T01:29:35.276Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-09T01:29:35.278Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-09T01:29:35.300Z"}
