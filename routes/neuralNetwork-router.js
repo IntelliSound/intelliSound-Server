@@ -18,6 +18,7 @@ const uuid = require('uuid');
 const neuralNetworkRouter = module.exports = new Router();
 
 neuralNetworkRouter.post(`/neuralnetwork/save/:neuralnetname`, jsonParser, bearerAuthMiddleware, (request, response, next) => {
+  let options = {isNew: true};
   if (!request.params.neuralnetname){
     throw new httpErrors('__ERROR__', 'Network must have a name');
   }
@@ -27,7 +28,7 @@ neuralNetworkRouter.post(`/neuralnetwork/save/:neuralnetname`, jsonParser, beare
   }).save()
     .then(network => {
       request.user.neuralNetworks.push(network._id);
-      return User.findByIdAndUpdate(request.user._id, request.user)
+      return User.findByIdAndUpdate(request.user._id, request.user, options)
         .then(() => response.sendStatus(200))
         .catch(next);
     });
@@ -35,6 +36,7 @@ neuralNetworkRouter.post(`/neuralnetwork/save/:neuralnetname`, jsonParser, beare
 
 // user must be logged in to perform any actions on a saved network/save a network
 neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMiddleware, (request, response, next) => {
+  let options = {isNew: true};
   // need to add the neuralNetwork created through WaveRouter to the user's array of networks
 
   // Andrew - TODO: check where this error is handled or if it needs to be refactored
@@ -75,7 +77,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
     .then(network => {
       newNeuralNetwork = network;
       request.user.neuralNetworks.push(newNeuralNetwork._id);
-      return User.findByIdAndUpdate(request.user._id, request.user)
+      return User.findByIdAndUpdate(request.user._id, request.user, options)
         .then(() => response.json({newNeuralNetwork, awsURL}));
     })
     .catch(next);
@@ -159,7 +161,7 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
     .then(network => {
       newNeuralNetwork = network;
       request.user.neuralNetworks.push(newNeuralNetwork._id);
-      return User.findByIdAndUpdate(request.user._id, request.user);
+      return User.findByIdAndUpdate(request.user._id, request.user, options);
     })
     .then(() => response.json({newNeuralNetwork, awsURL}))
     .catch(next);
