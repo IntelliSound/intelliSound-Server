@@ -40,6 +40,16 @@ describe(`User router`, () => {
           expect(response.body.token).toBeTruthy();
         });
     });
+    test(`user GET request to /login should return a 404 if there is invalid user`, () => {
+      return userMockFactory.create()
+        .then(mock => {
+          return superagent.get(`${API_URL}/login`)
+            .auth(mock.request.username);
+        })
+        .then(response => {
+          expect(response.status).toEqual(404);
+        });
+    });
     test(`user GET request to /user/me should return a user object on success`, () => {
       let tempUserMock;
       return userMockFactory.create()
