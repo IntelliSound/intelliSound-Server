@@ -189,3 +189,76 @@
 {"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-10T23:19:23.012Z"}
 {"level":"info","message":"There's a GET on /neuralnetwork/wave/saw","timestamp":"2018-02-10T23:20:04.802Z"}
 {"level":"info","message":"There's a GET on /neuralnetwork/wave/trumpet","timestamp":"2018-02-10T23:21:22.377Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-10T23:32:10.398Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/sqr","timestamp":"2018-02-10T23:32:20.127Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/tri","timestamp":"2018-02-10T23:39:33.263Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/wave/saw","timestamp":"2018-02-10T23:39:49.691Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:41:51.292Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:41:51.390Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:41:51.459Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:41:51.526Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:41:51.594Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:13.439Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:14.554Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:14.573Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:14.631Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:14.669Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:42:14.708Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:07.186Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:07.283Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:07.350Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:07.422Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:07.486Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:08.227Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:08.243Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:08.297Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:08.336Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:08.376Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:44:09.326Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:12.336Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:12.441Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:12.527Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:12.604Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:12.684Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:13.483Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:14.454Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:14.489Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:14.541Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:14.587Z"}
+{"level":"info","message":"responding with a 500 status: general error because Not allowed by CORS","timestamp":"2018-02-10T23:47:14.638Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-10T23:49:18.913Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7f850ca88e3805910b4fce","timestamp":"2018-02-10T23:49:32.832Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7f850ca88e3805910b4fd1/tri","timestamp":"2018-02-10T23:49:32.905Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7f8518a88e3805910b4fd4","timestamp":"2018-02-10T23:49:44.878Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/badid","timestamp":"2018-02-10T23:49:44.961Z"}
+{"level":"info","message":"responding with a 404 status","timestamp":"2018-02-10T23:49:44.966Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-10T23:49:45.829Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-10T23:49:45.880Z"}
+{"level":"info","message":"responding with a 400","timestamp":"2018-02-10T23:49:45.881Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-10T23:49:45.922Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-10T23:49:45.996Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-10T23:49:45.998Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-10T23:49:46.033Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco&authuser=0&session_state=a69be1f4c7326e6035c3f665ad665ad33e8ae10d26cf3..c1de&prompt=consent","timestamp":"2018-02-10T23:49:47.013Z"}
+{"level":"info","message":"code : 4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco","timestamp":"2018-02-10T23:49:47.014Z"}
+{"message":"Bad Request","stack":"Error: Bad Request\n    at Request.Object.<anonymous>.Request.callback (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/index.js:696:15)\n    at parser (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/index.js:906:18)\n    at Stream.res.on (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/parsers/json.js:19:7)\n    at emitNone (events.js:106:13)\n    at Stream.emit (events.js:208:7)\n    at Unzip.unzip.on (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/unzip.js:55:12)\n    at emitNone (events.js:111:20)\n    at Unzip.emit (events.js:208:7)\n    at endReadableNT (_stream_readable.js:1055:12)\n    at _combinedTickCallback (internal/process/next_tick.js:138:11)\n    at process._tickDomainCallback (internal/process/next_tick.js:218:9)","status":400,"response":{"req":{"method":"POST","url":"https://www.googleapis.com/oauth2/v4/token","data":{"code":"4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco","grant_type":"authorization_code","redirect_uri":"undefined/oauth/google"},"headers":{"user-agent":"node-superagent/3.8.2","content-type":"application/x-www-form-urlencoded"}},"header":{"vary":"Origin, X-Origin","content-type":"application/json; charset=UTF-8","content-encoding":"gzip","date":"Sat, 10 Feb 2018 23:49:43 GMT","expires":"Sat, 10 Feb 2018 23:49:43 GMT","cache-control":"private, max-age=0","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","server":"GSE","alt-svc":"hq=\":443\"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=\":443\"; ma=2592000; v=\"41,39,38,37,35\"","connection":"close","transfer-encoding":"chunked"},"status":400,"text":"{\n \"error\": \"invalid_request\",\n \"error_description\": \"Invalid parameter value for redirect_uri: Missing scheme: undefined/oauth/google\"\n}\n"},"level":"info","timestamp":"2018-02-10T23:49:47.213Z"}
+{"level":"info","message":"There's a GET on /oauth/undefined?error=oauth","timestamp":"2018-02-10T23:49:47.221Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-10T23:49:47.221Z"}
+{"level":"info","message":"There's a POST on /neuralnetwork/tri/testname","timestamp":"2018-02-11T01:06:52.301Z"}
+{"level":"info","message":"There's a GET on /neuralnetwork/5a7f97383f61ff0d7916eab9","timestamp":"2018-02-11T01:07:04.083Z"}
+{"level":"info","message":"There's a PUT on /neuralnetwork/5a7f97383f61ff0d7916eabc/tri","timestamp":"2018-02-11T01:07:04.166Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/5a7f973f3f61ff0d7916eabf","timestamp":"2018-02-11T01:07:11.745Z"}
+{"level":"info","message":"There's a DELETE on /neuralnetwork/badid","timestamp":"2018-02-11T01:07:11.826Z"}
+{"level":"info","message":"responding with a 404 status","timestamp":"2018-02-11T01:07:11.830Z"}
+{"level":"info","message":"There's a GET on /oauth/google?code=4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco&authuser=0&session_state=a69be1f4c7326e6035c3f665ad665ad33e8ae10d26cf3..c1de&prompt=consent","timestamp":"2018-02-11T01:07:27.158Z"}
+{"level":"info","message":"code : 4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco","timestamp":"2018-02-11T01:07:27.159Z"}
+{"message":"Bad Request","stack":"Error: Bad Request\n    at Request.Object.<anonymous>.Request.callback (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/index.js:696:15)\n    at parser (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/index.js:906:18)\n    at Stream.res.on (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/parsers/json.js:19:7)\n    at emitNone (events.js:106:13)\n    at Stream.emit (events.js:208:7)\n    at Unzip.unzip.on (/Users/Andrew/cf/401/projects/intellisound/intelliSound-Server/node_modules/superagent/lib/node/unzip.js:55:12)\n    at emitNone (events.js:111:20)\n    at Unzip.emit (events.js:208:7)\n    at endReadableNT (_stream_readable.js:1055:12)\n    at _combinedTickCallback (internal/process/next_tick.js:138:11)\n    at process._tickDomainCallback (internal/process/next_tick.js:218:9)","status":400,"response":{"req":{"method":"POST","url":"https://www.googleapis.com/oauth2/v4/token","data":{"code":"4/AADJOg9nZWb1duLbP9VxkGuTBD2ECEslOprKexMqRwGuCTJRulXppnD5bmhD5bmhpKSigscrK-DR8nuxC_E_dCu_Pjco","grant_type":"authorization_code","redirect_uri":"undefined/oauth/google"},"headers":{"user-agent":"node-superagent/3.8.2","content-type":"application/x-www-form-urlencoded"}},"header":{"vary":"Origin, X-Origin","content-type":"application/json; charset=UTF-8","content-encoding":"gzip","date":"Sun, 11 Feb 2018 01:07:27 GMT","expires":"Sun, 11 Feb 2018 01:07:27 GMT","cache-control":"private, max-age=0","x-content-type-options":"nosniff","x-frame-options":"SAMEORIGIN","x-xss-protection":"1; mode=block","server":"GSE","alt-svc":"hq=\":443\"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=\":443\"; ma=2592000; v=\"41,39,38,37,35\"","connection":"close","transfer-encoding":"chunked"},"status":400,"text":"{\n \"error\": \"invalid_request\",\n \"error_description\": \"Invalid parameter value for redirect_uri: Missing scheme: undefined/oauth/google\"\n}\n"},"level":"info","timestamp":"2018-02-11T01:07:28.092Z"}
+{"level":"info","message":"There's a GET on /oauth/undefined?error=oauth","timestamp":"2018-02-11T01:07:28.110Z"}
+{"level":"info","message":"__ERROR__ returning a 404 from the catch all route","timestamp":"2018-02-11T01:07:28.111Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-11T01:07:29.002Z"}
+{"level":"info","message":"There's a POST on /signup","timestamp":"2018-02-11T01:07:29.064Z"}
+{"level":"info","message":"responding with a 400","timestamp":"2018-02-11T01:07:29.065Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-11T01:07:29.111Z"}
+{"level":"info","message":"There's a GET on /login","timestamp":"2018-02-11T01:07:29.194Z"}
+{"level":"info","message":"responding with a 404","timestamp":"2018-02-11T01:07:29.197Z"}
+{"level":"info","message":"There's a GET on /user/me","timestamp":"2018-02-11T01:07:29.236Z"}
