@@ -49,7 +49,7 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
 
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
   const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
-  const key = uuid.v1();
+  const key = `${uuid.v1()}.temp.wav`;
   let neuralGeneratedFile = null;
   let newNeuralNetwork = null;
   let awsURL = null;
@@ -92,7 +92,7 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
 
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
   const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
-  const key = uuid.v1();
+  const key = `${uuid.v1()}.temp.wav`;
   let neuralNetworkToSave = null;
 
   return fsx.readFile(PATH)
@@ -131,7 +131,7 @@ neuralNetworkRouter.put('/neuralnetwork/:networkID/:wavename', jsonParser, beare
   let newNeuralNetwork = null;
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
   const TEMP_FILE_PATH = `${__dirname}/../temp/temp.wav`;
-  const key = uuid.v1();
+  const key = `${uuid.v1()}.temp.wav`;
   let awsURL = null;
   let neuralNetworkToSave = null;
   //Nicholas- set up networktoupdate and get ready to train
