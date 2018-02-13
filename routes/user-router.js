@@ -26,7 +26,10 @@ userRouter.post(`/signup`, jsonParser, (request, response, next) => {
 
 userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
   return request.user.createToken()
-    .then(token => response.json({token}))
+    .then(token => {
+      response.cookie('X-intelliSoundAi-Token', token, {maxAge: 900000});
+      response.json({token});
+    })
     .catch(next);
 });
 
