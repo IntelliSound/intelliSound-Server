@@ -33,10 +33,11 @@ userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
     .catch(next);
 });
 
-userRouter.get(`/user/me`, bearerAuthMiddleware, (request, response, next) => {
+userRouter.get(`/user`, bearerAuthMiddleware, (request, response, next) => {
   return User.findOne({_id: request.user._id})
     .then(user => {
-      return response.json(user);
+      const {username, neuralNetworks} = user;
+      return response.json({username, neuralNetworks});
     })
     .catch(next);
 });
