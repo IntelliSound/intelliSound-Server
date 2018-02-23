@@ -63,19 +63,17 @@ describe(`User router`, () => {
         });
     }); //TODO: nicholas delete me if not fixed
 
-    test(`user GET request to /user/me should return a user object on success`, () => {
+    test(`user GET request to /user should return a user object on success`, () => {
       let tempUserMock;
       return userMockFactory.create()
         .then(mock => {
           tempUserMock = mock.user;
-          return superagent.get(`${API_URL}/user/me`)
+          return superagent.get(`${API_URL}/user`)
             .set('Authorization', `Bearer ${mock.token}`);
         })
         .then(response => {
           expect(response.status).toEqual(200);
           expect(response.body.username).toBe(tempUserMock.username);
-          expect(response.body.email).toBe(tempUserMock.email);
-          expect(response.body._id).toBe(tempUserMock._id.toString());
         });
     });
   });

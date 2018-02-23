@@ -26,14 +26,18 @@ userRouter.post(`/signup`, jsonParser, (request, response, next) => {
 
 userRouter.get(`/login`, basicAuthMiddleware, (request, response, next) => {
   return request.user.createToken()
-    .then(token => response.json({token}))
+    .then(token => {
+      response.cookie('X-intelliSoundAi-Token', token, {maxAge: 900000});
+      response.json({token});
+    })
     .catch(next);
 });
 
-userRouter.get(`/user/me`, bearerAuthMiddleware, (request, response, next) => {
+userRouter.get(`/user`, bearerAuthMiddleware, (request, response, next) => {
   return User.findOne({_id: request.user._id})
     .then(user => {
-      return response.json(user);
+      const {username, neuralNetworks} = user;
+      return response.json({username, neuralNetworks});
     })
     .catch(next);
 });

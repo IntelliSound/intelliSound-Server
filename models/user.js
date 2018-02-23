@@ -30,8 +30,11 @@ const userSchema = mongoose.Schema({
     // required: true,
   },
   neuralNetworks: [
-    {type: mongoose.Schema.Types.ObjectId,
-      ref: 'neuralNetwork'}],
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'neuralNetwork',
+    },
+  ],
 });
 
 userSchema.methods.verifyPassword = function(password){
