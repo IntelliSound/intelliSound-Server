@@ -29,7 +29,6 @@
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
     "jest": "^22.1.4",
-    "superagent": "^3.8.2"
   },
   "dependencies": {
     "aws-sdk": "^2.191.0",
@@ -42,6 +41,7 @@
     "http-errors": "^1.6.2",
     "jsonwebtoken": "^8.1.1",
     "mongoose": "^5.0.3",
+    "superagent": "^3.8.2",
     "synaptic": "^1.1.4",
     "winston": "^2.4.0"
   }
