@@ -28,7 +28,7 @@
     "aws-sdk-mock": "^1.7.0",
     "eslint": "^4.17.0",
     "faker": "^4.1.0",
-    "jest": "^22.1.4",
+    "jest": "^22.1.4"
   },
   "dependencies": {
     "aws-sdk": "^2.191.0",
