@@ -85,9 +85,15 @@ neuralNetworkRouter.post(`/neuralnetwork/:wavename/:neuralnetname`, bearerAuthMi
 });
 
 neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, next) => {
-
   if (!request.params.wavename) {
     throw new httpErrors('__ERROR__', 'User must select a wave to use');
+  }
+
+  // Andrew - If a query string is provided on the get request, i.e. ?seed=tri
+  //          that specific array will be required in and set as the seedArray
+  let seedArray = null;
+  if (request.query.seed){
+    seedArray = require(`../../assets/${request.query.seed}`);
   }
 
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
@@ -98,7 +104,7 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
   return fsx.readFile(PATH)
     .then(data => {
       let parsedFile = waveParser(data);
-      parsedFile = neuralNetwork(parsedFile);
+      parsedFile = neuralNetwork(parsedFile, null, seedArray);
       const neuralGeneratedFile = waveWriter(parsedFile);
       neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
       return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);
