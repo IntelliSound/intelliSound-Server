@@ -55,6 +55,24 @@ describe(`Neural Network Router`, () => {
     });
   });
 
+  describe(`neural network GET/neuralnetwork/wave/:wavename request`, () => {
+    test(`neural network GET/neuralnetwork/wave/:wavename request should return a 200 status specific network`, () => {
+      return superagent
+        .get(`${API_URL}/neuralnetwork/wave/saw`)
+        .then(res => {
+          expect(res.status).toEqual(200);
+        });
+    }, 100000);
+
+    test(`neural network GET/neuralnetwork/wave/:wavename with optional query request should return a 200 status specific network`, () => {
+      return superagent
+        .get(`${API_URL}/neuralnetwork/wave/saw?seed=sin`)
+        .then(res => {
+          expect(res.status).toEqual(200);
+        });
+    }, 100000);
+  });
+
 
   describe(`neural network PUT/:neuralnetworkID/:wavename request`, () => {
     test(`neural network PUT request should return a 200 status if there are no errors`, () => {

@@ -93,7 +93,7 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
   //          that specific array will be required in and set as the seedArray
   let seedArray = undefined;
   if (request.query.seed){
-    seedArray = require(`../../assets/${request.query.seed}`);
+    seedArray = require(`../assets/${request.query.seed}`);
   }
 
   const PATH = `${__dirname}/../assets/${request.params.wavename}.wav`;
