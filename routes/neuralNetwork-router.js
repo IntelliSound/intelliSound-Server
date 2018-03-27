@@ -91,7 +91,7 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
 
   // Andrew - If a query string is provided on the get request, i.e. ?seed=tri
   //          that specific array will be required in and set as the seedArray
-  let seedArray = null;
+  let seedArray = undefined;
   if (request.query.seed){
     seedArray = require(`../../assets/${request.query.seed}`);
   }
@@ -104,7 +104,7 @@ neuralNetworkRouter.get('/neuralnetwork/wave/:wavename', (request, response, nex
   return fsx.readFile(PATH)
     .then(data => {
       let parsedFile = waveParser(data);
-      parsedFile = neuralNetwork(parsedFile, null, seedArray);
+      parsedFile = neuralNetwork(parsedFile, undefined, seedArray);
       const neuralGeneratedFile = waveWriter(parsedFile);
       neuralNetworkToSave = JSON.stringify(parsedFile.neuralNet);
       return fsx.writeFile(TEMP_FILE_PATH, neuralGeneratedFile);

@@ -29,4 +29,18 @@ describe('Neural Network Test', () => {
           });
       });
   }, 150000);
+
+  test('should behave by outputting predicted numbers from the wave file series', () => {
+    const inputFilePath1 = `${__dirname}/../assets/sqr.wav`;
+    const outputFilePath = `${__dirname}/temp/transformed2.wav`;
+    let parsedFile;
+
+    return fsx.readFile(inputFilePath1)
+      .then(data => {
+        parsedFile = waveParser(data);
+        parsedFile = neuralNetwork(parsedFile, undefined, require('../assets/org'));
+        fsx.writeFile(outputFilePath, waveWriter(parsedFile));
+        expect(parsedFile.neuralTransformedArray.length).toBeTruthy();
+      });
+  }, 150000);
 });
