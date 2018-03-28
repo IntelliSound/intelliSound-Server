@@ -41,6 +41,7 @@
     "fs-extra": "^5.0.0",
     "http-errors": "^1.6.2",
     "jsonwebtoken": "^8.1.1",
+    "moment": "^2.21.0",
     "mongoose": "^5.0.3",
     "synaptic": "^1.1.4",
     "winston": "^2.4.0"
