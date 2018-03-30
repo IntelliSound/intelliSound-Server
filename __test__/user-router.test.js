@@ -14,6 +14,14 @@ describe(`User router`, () => {
   afterAll(server.stop);
   afterEach(userMockFactory.remove);
 
+  describe('Basic Request', () => {
+    test('should return 200', () => {
+      return superagent.get(`${API_URL}/`).then(response => {
+        expect(response.status).toEqual(200);
+      });
+    });
+  });
+
   describe(`testing user POST routes`, () => {
     test(`user POST request to /signup should return a test message on success`, () => {
       return superagent.post(`${API_URL}/signup`)
