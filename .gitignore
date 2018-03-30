@@ -19,6 +19,7 @@ db
 ### Node ###
 # Logs
 logs
+log.json
 *.log
 npm-debug.log*
 yarn-debug.log*
