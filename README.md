@@ -1,7 +1,7 @@
 # intelliSound-Server
 
 [![Build Status](https://travis-ci.org/IntelliSound/intelliSound-Server.svg?)](https://travis-ci.org/ScrambleVox/server)
-![Heroku](http://heroku-badge.herokuapp.com/?app=angularjs-crypto&style=flat&svg=1)
+[![Heroku](http://heroku-badge.herokuapp.com/?app=intellisound-server)]
 
 ### _Train your very own neural net_
 
