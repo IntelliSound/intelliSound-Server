@@ -7,7 +7,7 @@
 
 ## Overview
 
-The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron algorithm, which is a feed forward neural network. A neural network is trained on a simple audio waveform, and the neural network will learn to predict this pattern. When activated, it will take a random noise seed, and attempt to build its own version of the audio waveform it has been trained on, based on that seed input.
+The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron algorithm, which is a feed forward neural network. A neural network is trained on a simple audio waveform, and the neural network will learn to predict this pattern. When activated, it will take a random noise seed as default, and attempt to build its own version of the audio waveform it has been trained on, based on that seed input. There are additional optional query parameters which allow a user to choose a different seed input on which the neural network can use to build the output audio.
 
 ## Getting Started
 
@@ -15,11 +15,15 @@ A basic understanding of npm, git, aws S3, and ES6 is assumed. To build your own
 
 ## Models
 
-To be completed.
+There is a neuralNetwork model as well as a user model, which are optional to use. The server may be queried without needing a token. If desired, a client can create a user account, which can persist trained neural networks. Using these routes, a user can specify one of their saved neural nets to train, as well as name them.
 
 ### User
 
+The user model has username, email, and password as required properties on creation. The password is hashed with a secret salt and stored only in its hashed form. Upon creation, a tokenSeed is generated and saved, and each time a user logs back in, this tokenSeed is randomly re-generated. There is also a neuralNetwork property which is a link to the user's neural networks associated with their account. Last, there is an option to login using Google's OAuth, and the user model has a property which denotes whether OAuth was used in lieu of normal authentication.
+
 ### NeuralNetwork
+
+The neural network model is relatively simple. It consists of a name property and a string which is the JSON representation of the saved neural network itself.
 
 ## Routes
 
