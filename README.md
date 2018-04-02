@@ -8,11 +8,11 @@
 ## Overview
 
 The intelliSound API allows a client to create and train a simple predictive neural network. The network is based on a simple perceptron algorithm, which is a feed forward neural network. A neural network is trained on a simple audio waveform, and the neural network will learn to predict this pattern. When activated, it will take a random noise seed as default, and attempt to build its own version of the audio waveform it has been trained on, based on that seed input. There are additional optional query parameters which allow a user to choose a different seed input on which the neural network can use to build the output audio.
-
+***
 ## Getting Started
 
 A basic understanding of npm, git, aws S3, and ES6 is assumed. To build your own server, first fork/clone this repo and do an `npm i`. Set up an aws bucket, and create the relevant env variables in a .env file. In the .env, setup the PORT, MONGODB_URI, and SECRET_SALT variables with the values relevant to your deployment. The SECRET_SALT should be a long string of randomly generated characters, as this is used to sign the token seed during encryption. Also set in the .env file your relevant aws S3 keys, your AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and AWS_BUCKET.
-
+***
 ## Models
 
 There is a neuralNetwork model as well as a user model, which are optional to use. The server may be queried without needing a token. If desired, a client can create a user account, which can persist trained neural networks. Using these routes, a user can specify one of their saved neural nets to train, as well as name them.
@@ -24,7 +24,7 @@ The user model has username, email, and password as required properties on creat
 ### NeuralNetwork
 
 The neural network model is relatively simple. It consists of a name property and a string which is the JSON representation of the saved neural network itself.
-
+***
 ## Routes
 
 There are three different main routes, the user route, the neural network route and the OAuth route.
@@ -47,12 +47,27 @@ Delete requests can be made on the route '/:networkID'. It will delete the netwo
 
 ### OAuth
 
-
-
+There is one get route at '/oauth/google' which takes a code as a query. This route will handle the OAuth interactions with Google, and if successful, allows a user to obtain an account and receive a token as an alternative to signing in via the user routes.
+***
 ## Code Examples
 
-To be completed.
+```javascript
+superagent.post(`${API_URL}/signup`)
+  .send({
+    username: 'therealcameron',
+    email: 'cameron@therealcameron.com',
+    password: 'supersecretpassword',
+  })
 
+superagent.get(`${API_URL}/login`)
+  .auth(request.username, request.password);
+
+superagent.get(`${API_URL}/user`)
+  .set('Authorization', `Bearer ${token}`);
+
+superagent.get(`${API_URL}/neuralnetwork/wave/saw?seed=sin`);
+```
+***
 ## Technologies Used
 
 ### Production
