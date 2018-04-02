@@ -11,7 +11,7 @@ const oauthRouter = module.exports = new Router();
 const GOOGLE_OAUTH_URL = 'https://www.googleapis.com/oauth2/v4/token';
 const OPEN_ID_URL = 'https://www.googleapis.com/plus/v1/people/me/openIdConnect';
 
-oauthRouter.get('/oauth/google',(request,response,next) => {
+oauthRouter.get('/oauth/google',(request,response,next) => { //eslint-disable-line
   if(!request.query.code){
     response.redirect(process.env.CLIENT_URL);
   } else {

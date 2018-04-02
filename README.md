@@ -27,11 +27,15 @@ The neural network model is relatively simple. It consists of a name property an
 
 ## Routes
 
-To be completed.
+There are three different main routes, the user route, the neural network route and the OAuth route.
 
 ### User
 
+The user routes are a group of three different routes: '/signup', '/login', and '/user'. The signup route takes a post request with a body. The body must contain a username, an email and a password. The login and user routes both require an auth header, the login route will perform basic auth and the user route will require a token.
+
 ### NeuralNetwork
+
+
 
 ### OAuth
 
