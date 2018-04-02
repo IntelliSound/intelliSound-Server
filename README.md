@@ -35,9 +35,19 @@ The user routes are a group of three different routes: '/signup', '/login', and 
 
 ### NeuralNetwork
 
+The neural network routes are all prefixed by '/neuralnetwork'. All four CRUD operations are available on the neural networks. 
 
+Post requests are only available for logged-in users. There are two post routes, '/save/:neuralnetname', which will take a trained neural net and save it to a user's account, and '/:wavename/:neuralnetname', which will train a new neural network and save it to a user's account.
+
+Get requests can be made to retrieve existing networks or to train new networks and return the output audio to the user via an AWS S3 link. The get on '/wave/:wavename' will train a new neural net on the parameter passed in as wavename. This route also takes an optional query, ?seed=seedwave. The default wave that the neural network will build the output wave on is noise, but with the seed query, one of the other waveforms can be used to build upon. The valid wavenames and seedwaves are: 'org', 'saw', 'sin', 'sqr' and 'tri'. The get on '/:networkID' will return the neural network associated with that ID. This route requires bearer auth.
+
+Put requests can be made on the route '/:networkID/:wavename' will get the network at the ID given and train it on the wavename. It will return the link to AWS resource where the output is saved. Bearer auth is required.
+
+Delete requests can be made on the route '/:networkID'. It will delete the network at that ID. Bearer auth is required.
 
 ### OAuth
+
+
 
 ## Code Examples
 
